@@ -82,6 +82,7 @@ I have included details of testing in a separate file [TESTING.md](TESTING.md).
 ### **Media**
 
 * [Vecteezy](https://www.vecteezy.com/) :
-  * Vector used for favicon by [Ardi Lukmanul hakim](hhttps://www.vecteezy.com/vector-art/4750098-vector-illustration-of-colorful-round-chameleon-eyes-simple-flat-design") 
+  * Vector used for favicon by [Ardi Lukmanul hakim](hhttps://www.vecteezy.com/vector-art/4750098-vector-illustration-of-colorful-round-chameleon-eyes-simple-flat-design")
+* [Ascii](https://www.ascii-art-generator.org/) 
 
 ## **Future development**
