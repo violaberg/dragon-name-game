@@ -1,31 +1,87 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Dragons**
 
-Welcome USER_NAME,
+## **Overview**
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Guess the name of the mysterious dragon in this exciting terminal-based word guessing game! You'll be presented with a hidden dragon name, and your task is to reveal the name one letter at a time. With a limited number of incorrect guesses, can you unveil the dragon's identity and discover the secrets it holds? A fun and challenging adventure awaits as you uncover the name of the enigmatic dragon while enjoying the thrill of the hunt. Prepare to test your word-solving skills!<br>
+![Main page]()
 
-## Reminders
+## Table of Contents:
+- [**Dragon Guessing Game**](#dragon-guessing-game)
+  - [**Overview**](#overview)
+  - [Table of Contents:](#table-of-contents)
+  - [**Planning**](#planning)
+    - [**Intended Users**](#intended-users)
+    - [**User Stories**](#user-stories)
+    - [**Goals**](#goals)
+    - [**Lucidchart**](#lucidchart)
+  - [**Features**](#features)
+    - [**Favicon**](#favicon)
+    - [**Logo**](#logo)
+  - [**Testing**](#testing)
+  - [**Deployment**](#deployment)
+  - [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media**](#media)
+  - [**Future development**](#future-development)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## **Planning**
 
-## Creating the Heroku app
+### **Intended Users**
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+* Anyone who loves a guessing game.
+* Anyone with interest in dragons.
+* People who are looking for fun with added challenge.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### **User Stories**
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* As a user, I want to know the main intention of the site.
+* As a user I want to see the game rules clearly written.
+* As a user I want to play puzzle without compromising space.
+* As a user I want to be able to navigate through the site easily.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### **Goals**
 
-Connect your GitHub repository and deploy as normal.
+* Make game easy to navigate through.
+* Provide a free guessing game.
+* Provide simple and short rules of the game.
+* Educate user about different dragons and provide a short description of each.
 
-## Constraints
+### **Lucidchart**
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+I created a flowchart using [Lucidchart](https://lucid.co/?_gl=1*x824jw*_ga*MTQ0OTcxNjc5Ni4xNjk3NTYwMDUx*_ga_MPV5H3XMB5*MTY5NzYyMzg3Ny4zLjAuMTY5NzYyMzg3Ny42MC4wLjA.) website to help with a flow of the game.<br>
+![Lucidchart](docs/dragon_guessing_game.jpeg)
 
------
-Happy coding!
+## **Features**
+
+### **Favicon**
+
+Favicon was created using a vector from [Vecteezy](https://www.vecteezy.com/) website with an idea to recreate the look of a dragon eye. I used [Faviconer](http://www.faviconer.com/) website to change it into favicon.
+
+### **Logo**
+
+![Logo]()
+
+### **Menu**
+
+## **Testing**
+
+I have included details of testing in a separate file [TESTING.md](TESTING.md).
+
+## **Deployment**
+
+[Link to the live website]()
+
+## **Credits**
+
+* The biggest thank you as always to my family during this busy time of juggling project, hackathon and life in general.
+* Thank you as well to my mentor David Bowers who supported me from the very beginning always giving the best advice and ideas for solutions.
+* And thank you to Kim for support and in general for convincing me to take on this course.
+
+### **Content**
+
+### **Media**
+
+* [Vecteezy](https://www.vecteezy.com/) :
+  * Vector used for favicon by [Ardi Lukmanul hakim](hhttps://www.vecteezy.com/vector-art/4750098-vector-illustration-of-colorful-round-chameleon-eyes-simple-flat-design") 
+
+## **Future development**
