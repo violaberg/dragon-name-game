@@ -58,6 +58,45 @@ def display_name(name, guessed_letters):
     return display
 
 
+def start_game():
+    """
+    Loop for the game
+    """
+    name_to_guess = random_name(dragon_list)
+    guessed_letters = []
+    attempts = 8
+    
+    print("Welcome to Dragon Guessing Game!")
+    print("You have {} attempts to guess the name."format(attempts))
+    
+    while attempts > 0:
+        print("\nName to guess {}".format(display_name(name_to_guess, guessed_letters)))
+        guess = input("Guess a letter {}").lower()
+        
+        if len(guess) != 1 or not guess.isalpha():
+            print("Please enter one letter!")
+            continue
+        
+        if guess in guessed_letters:
+            print("Oh, sorry, you have already guessed that letter!")
+            continue
+        
+        guessed_letters.append(guess)
+        
+        if guess in name_to_guess:
+            print("Great guess! You are one step closer to revealing dragon!")
+        
+        else:
+            print("Aw, incorrect! Please try again!")
+            attempts -= 1
+            
+        if "_" not in display_name(name_to_guess, guessed_letters):
+            print("\nCongratulations! You are a true dragon master! You guessed {} dragon!".format(name_to_guess))
+            break
+        
+        if "_" in display_name(name_to_guess, guessed_letters):
+            print("Aw, sorry, you are out of attempts! Dragon got you! Name was: {}".format(name_to_guess))
+
 def main():
     """
     Runs all functions in program
@@ -67,3 +106,4 @@ def main():
 
 
 main()
+start_game()
