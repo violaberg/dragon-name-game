@@ -34,7 +34,7 @@ def intro():
         
 def enter_username():
     """
-    Asks user to create a username consisting of at least 4 and up to 15 characters.
+    Asks user to create a username consisting of 4 - 15 characters.
     """
     while True:
         print()
@@ -87,11 +87,11 @@ def start_game():
     guessed_letters = []
     attempts = 8
     
-    print("Welcome to Dragon Guessing Game!")
-    print("You have {} attempts to guess the name."format(attempts))
+    print(f"Welcome, {username}!")
+    print(f"You have {attempts} attempts to guess the name.")
     
     while attempts > 0:
-        print("\nName to guess {}".format(display_name(name_to_guess, guessed_letters)))
+        print(f"Name to guess: {display_name(name_to_guess, guessed_letters)}")
         guess = input("Guess a letter {}").lower()
         
         if len(guess) != 1 or not guess.isalpha():
@@ -111,11 +111,14 @@ def start_game():
             attempts -= 1
             
         if "_" not in display_name(name_to_guess, guessed_letters):
-            print("\nCongratulations! You are a true dragon master! You guessed {} dragon!".format(name_to_guess))
+            print("Congrats! You are a true dragon master!")
+            print(f"You guessed {name_to_guess} dragon!")
             break
         
         if "_" in display_name(name_to_guess, guessed_letters):
-            print("Aw, sorry, you are out of attempts! Dragon got you! Name was: {}".format(name_to_guess))
+            print("Aw, sorry, you are out of attempts! Dragon got you!")
+            print(f"Name to guess was: {name_to_guess}")
+            
 
 def main():
     """
@@ -123,7 +126,9 @@ def main():
     """
     main_logo()
     intro()
+    username = enter_username()
+    start_game()
 
 
-main()
-start_game()
+if __name__ == "__main__":
+    main()
