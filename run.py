@@ -45,6 +45,19 @@ def random_name(dragon_list):
     return random.choice(dragon_list)
 
 
+def display_name(name, guessed_letters):
+    """
+    Shows the name with guessed letters
+    """
+    display = ""
+    for letter in name:
+        if letter in guessed_letters:
+            display += letter
+        else:
+            display = "_"
+    return display
+
+
 def main():
     """
     Runs all functions in program
