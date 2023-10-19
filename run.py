@@ -30,11 +30,32 @@ def intro():
     ]
     for line in game_intro:
         print(line)
+        
+        
+def enter_username():
+    """
+    Asks user to create a username consisting of at least 4 and up to 15 characters.
+    """
+    while True:
+        print()
+        username = input("Please enter username:\n")
+        
+        if " " in username:
+            print("Username can't contain empty spaces!")
+            
+        if len(username) < 4:
+            print("Sorry, username has to contain at least 4 characters!")
+            
+        if len(username) > 15:
+            print("Sorry, username can't be longer than 15 characters!")
+            
+        else:
+            return username
 
 
 def random_name(dragon_list):
     """
-    Function to choose random dragon name from the list
+    Function to choose random dragon name from the list.
     """
     dragon_list = ["knucker", "asian lung", "wyvern", "amphithere",
                    "lindworm", "phoenix", "marsupial", "kirimu",
@@ -77,7 +98,7 @@ def start_game():
             print("Please enter one letter!")
             continue
         
-        if guess in guessed_letters:
+        elif guess in guessed_letters:
             print("Oh, sorry, you have already guessed that letter!")
             continue
         
@@ -85,7 +106,6 @@ def start_game():
         
         if guess in name_to_guess:
             print("Great guess! You are one step closer to revealing dragon!")
-        
         else:
             print("Aw, incorrect! Please try again!")
             attempts -= 1
