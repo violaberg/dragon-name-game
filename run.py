@@ -11,7 +11,7 @@ def main_logo():
         "| | | | '__/ _` |/ _` |/ _ \| '_ \/ __|",
         "| |_| | | | (_| | (_| | (_) | | | \_ \_",
         "|____/|_|  \__,_|\__, |\___/|_| |_|___/",
-        "                 |___/",                
+        "                 |___/",               
     ]
     for line in logo:
         print(line)
@@ -30,6 +30,28 @@ def intro():
     ]
     for line in game_intro:
         print(line)
+        
+       
+def continue_to_game(username, dragon_list):
+    """
+    Verifies user wants to play the game by entering y for yes or n for no
+    """
+    choice = input("Would you like to play (yes/no)?: ").lower()
+    
+    if choice in ["yes", "y"]:
+        start_game(username, dragon_list)
+    elif choice in ["no", "n"]:
+        exit_game()
+    else:
+        print("Please enter yes or no")
+        
+        
+def exit_game():
+    """
+    Exits game gracefully and thanks user for visiting.
+    """
+    print("Thank you for visiting 'Dragons' game. Goodbye!")
+    exit()
         
         
 def enter_username():
@@ -86,7 +108,7 @@ def start_game(username, dragon_list):
     
     while attempts > 0:
         print(f"Name to guess: {display_name(name_to_guess, guessed_letters)}")
-        guess = input("Guess a letter {}").lower()
+        guess = input("Guess a letter: ").lower()
         
         if len(guess) != 1 or not guess.isalpha():
             print("Please enter one letter!")
@@ -108,7 +130,7 @@ def start_game(username, dragon_list):
             print("Congrats! You are a true dragon master!")
             print(f"You guessed {name_to_guess} dragon!")
             break
-        
+
         if "_" in display_name(name_to_guess, guessed_letters):
             print("Aw, sorry, you are out of attempts! Dragon got you!")
             print(f"Name to guess was: {name_to_guess}")
@@ -119,16 +141,16 @@ def main():
     Runs all functions in program
     """
     main_logo()
-    intro()
-    username = enter_username()
     dragon_list = ["knucker", "asian lung", "wyvern", "amphithere",
                    "lindworm", "phoenix", "marsupial", "kirimu",
                    "leviathan", "bakunawa", "imoogi", "kihawahine",
                    "basilisk", "frost", "cockatrice", "horned serpent",
                    "taniwha", "uwabami", "orochi", "zahhak"
                    ]
+    intro()
+    username = enter_username()
+    continue_to_game(username, dragon_list)
     start_game(username, dragon_list)
 
 
-if __name__ == "__main__":
-    main()
+main()
