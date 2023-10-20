@@ -57,12 +57,6 @@ def random_name(dragon_list):
     """
     Function to choose random dragon name from the list.
     """
-    dragon_list = ["knucker", "asian lung", "wyvern", "amphithere",
-                   "lindworm", "phoenix", "marsupial", "kirimu",
-                   "leviathan", "bakunawa", "imoogi", "kihawahine",
-                   "basilisk", "frost", "cockatrice", "horned serpent",
-                   "taniwha", "uwabami", "orochi", "zahhak"
-                   ]
     return random.choice(dragon_list)
 
 
@@ -79,7 +73,7 @@ def display_name(name, guessed_letters):
     return display
 
 
-def start_game():
+def start_game(username, dragon_list):
     """
     Loop for the game
     """
@@ -98,7 +92,7 @@ def start_game():
             print("Please enter one letter!")
             continue
         
-        elif guess in guessed_letters:
+        if guess in guessed_letters:
             print("Oh, sorry, you have already guessed that letter!")
             continue
         
@@ -127,7 +121,13 @@ def main():
     main_logo()
     intro()
     username = enter_username()
-    start_game()
+    dragon_list = ["knucker", "asian lung", "wyvern", "amphithere",
+                   "lindworm", "phoenix", "marsupial", "kirimu",
+                   "leviathan", "bakunawa", "imoogi", "kihawahine",
+                   "basilisk", "frost", "cockatrice", "horned serpent",
+                   "taniwha", "uwabami", "orochi", "zahhak"
+                   ]
+    start_game(username, dragon_list)
 
 
 if __name__ == "__main__":
