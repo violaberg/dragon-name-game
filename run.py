@@ -31,25 +31,31 @@ def intro():
     Introduces to game
     """
     game_intro = [
+        "",
         "Welcome to the mystical world of Dragons!",
+        "",
         "A captivating adventure that will test your knowledge of dragons.",
+        "",
         "Each dragon has concealed its identity behind a web of letters,",
+        "",
         "daring you to uncover its name, one letter at a time.",
+        "",
         "The adventure awaits, and the dragon awaits your daring guesses."
     ]
     for line in game_intro:
         print(line)
 
 
-def continue_to_game(username, dragon_list):
+def continue_to_game(username, dragons):
     """
     Verifies user wants to play the game by entering y for yes or n for no
     """
+    dragons = dragon_list
     while True:
         choice = input("Would you like to play (yes/no)?:\n").strip().lower()
 
         if choice in ["yes", "y"]:
-            start_game(username, dragon_list)
+            start_game(username, dragons)
             break
         elif choice in ["no", "n"]:
             main_logo()
@@ -83,17 +89,17 @@ def enter_username():
             print("Sorry, username can't be longer than 15 characters!")
 
         elif not username.isalpha():
-            print("Sorry, username can't contain numbers or special characters!")
+            print("Sorry, username can't have numbers or special characters!")
 
         else:
             return username
 
 
-def random_name(dragon_list):
+def random_name(dragons):
     """
     Function to choose random dragon name from the list.
     """
-    return random.choice(dragon_list)
+    return random.choice(dragons)
 
 
 def display_name(name, guessed_letters):
@@ -109,11 +115,11 @@ def display_name(name, guessed_letters):
     return display
 
 
-def start_game(username, dragon_list):
+def start_game(username, dragons):
     """
     Loop for the game
     """
-    name_to_guess = random_name(dragon_list)
+    name_to_guess = random_name(dragons)
     guessed_letters = []
     attempts = 8
 
