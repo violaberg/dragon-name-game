@@ -36,14 +36,15 @@ def continue_to_game(username, dragon_list):
     """
     Verifies user wants to play the game by entering y for yes or n for no
     """
-    choice = input("Would you like to play (yes/no)?:\n").lower()
+    while True:
+        choice = input("Would you like to play (yes/no)?:\n").strip().lower()
 
-    if choice in ["yes", "y"]:
-        start_game(username, dragon_list)
-    elif choice in ["no", "n"]:
-        exit_game()
-    else:
-        print("Please enter yes or no")
+        if choice in ["yes", "y"]:
+            start_game(username, dragon_list)
+        elif choice in ["no", "n"]:
+            exit_game()
+        else:
+            print("Please enter yes or no")
 
 
 def exit_game():
@@ -56,7 +57,7 @@ def exit_game():
 
 def enter_username():
     """
-    Asks user to create a username consisting of 4 - 15 characters.
+    Asks user to create a username consisting of 4 - 15 letters.
     """
     while True:
         print()
@@ -65,11 +66,14 @@ def enter_username():
         if " " in username:
             print("Username can't contain empty spaces!")
 
-        if len(username) < 4:
+        elif len(username) < 4:
             print("Sorry, username has to contain at least 4 characters!")
 
-        if len(username) > 15:
+        elif len(username) > 15:
             print("Sorry, username can't be longer than 15 characters!")
+
+        elif not username.isalpha():
+            print("Sorry, username can't contain numbers or special characters!")
 
         else:
             return username
