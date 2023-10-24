@@ -1,6 +1,14 @@
 import random
 
 
+dragon_list = ["knucker", "asian lung", "wyvern", "amphithere",
+               "lindworm", "phoenix", "marsupial", "kirimu",
+               "leviathan", "bakunawa", "imoogi", "kihawahine",
+               "basilisk", "frost dragon", "cockatrice", "horned serpent",
+               "taniwha", "uwabami", "orochi", "zahhak"
+               ]
+
+
 def main_logo():
     """
     Print the name of the game
@@ -15,6 +23,7 @@ def main_logo():
     ]
     for line in logo:
         print(line)
+    return
 
 
 def intro():
@@ -41,18 +50,19 @@ def continue_to_game(username, dragon_list):
 
         if choice in ["yes", "y"]:
             start_game(username, dragon_list)
+            break
         elif choice in ["no", "n"]:
-            exit_game()
+            main_logo()
         else:
             print("Please enter yes or no")
 
 
 def exit_game():
     """
-    Exits game gracefully and thanks user for visiting.
+    Exits game gracefully by returning to intro and thanks user for visiting.
     """
     print("Thank you for visiting 'Dragons' game. Goodbye!")
-    exit()
+    main_logo()
 
 
 def enter_username():
@@ -145,12 +155,6 @@ def main():
     Runs all functions in program
     """
     main_logo()
-    dragon_list = ["knucker", "asian lung", "wyvern", "amphithere",
-                   "lindworm", "phoenix", "marsupial", "kirimu",
-                   "leviathan", "bakunawa", "imoogi", "kihawahine",
-                   "basilisk", "frost", "cockatrice", "horned serpent",
-                   "taniwha", "uwabami", "orochi", "zahhak"
-                   ]
     intro()
     username = enter_username()
     continue_to_game(username, dragon_list)
