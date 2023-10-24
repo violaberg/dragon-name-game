@@ -36,7 +36,7 @@ def continue_to_game(username, dragon_list):
     """
     Verifies user wants to play the game by entering y for yes or n for no
     """
-    choice = input("Would you like to play (yes/no)?: ").lower()
+    choice = input("Would you like to play (yes/no)?:\n").lower()
 
     if choice in ["yes", "y"]:
         start_game(username, dragon_list)
@@ -108,7 +108,7 @@ def start_game(username, dragon_list):
 
     while attempts > 0:
         print(f"Name to guess: {display_name(name_to_guess, guessed_letters)}")
-        guess = input("Guess a letter: ").lower()
+        guess = input("Guess a letter:\n").lower()
 
         if len(guess) != 1 or not guess.isalpha():
             print("Please enter one letter!")

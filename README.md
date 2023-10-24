@@ -69,7 +69,21 @@ I have included details of testing in a separate file [TESTING.md](TESTING.md).
 
 ## **Deployment**
 
-[Link to the live website]()
+### Deploying to Heroku
+
+Code Institute Python Essentials Template was used for this project so the python code can be viewed in a terminal in a browser:
+1. Google Heroku and open website, log in to Heroku or create a new account
+2. On the dashboard click "New" and select "Create new app"
+3. Enter unique app name and select region
+4. Click "Create app"
+5. On the next page find "Settings" tab and locate "Config Vars"
+6. Click "Reveal Config Vars" and add "PORT" as a key and with value "8000", click "Add"
+7. Scroll down to "Buildpack" and click "Add", select "Python" first
+8. Repeat step 7. to add "Node.js", making sure "Python" is first on the list
+9. Scroll to the top and select "Deploy" tab
+10. Select GitHub as deployment method and search for your repository, once found click "Connect"
+11. Scroll down and choose between "Enable Automatic Deploys" so the code is updated every time it is pushed to Github or "Manual Deploy"
+12. Deployed site [Dragons](https://dragon-guessing-game-d41047f8049b.herokuapp.com/)
 
 ## **Credits**
 
