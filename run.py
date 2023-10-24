@@ -46,6 +46,34 @@ def intro():
         print(line)
 
 
+def game_rules():
+    """
+    Shows rules of the game if "yes" is chosen or
+    if "no" is entered skips to verifying if player wants to play
+    """
+    rules = input("Would you like to see the rules (yes/no)?:\n").lower()
+
+    if rules in ["yes", "y",]:
+        # Display rules
+        print("'Dragons' game rules")
+        print("Enter username to play")
+        print("Your mission is to guess the name of a concealed dragon")
+        print("You will be given a random dragon name to guess")
+        print("Guess one letter at a time")
+        print("You have 8 chances to guess")
+        print("Correct guess will reveal the letter,")
+        print("Incorrect guess will add to attempt count")
+        print("When you guess the dragon or run out of attempts,")
+        print("Dragon name and description will be revealed")
+
+    elif rules in ["no", "n"]:
+        # Skip to verifying if user wants to play
+        return
+
+    else:
+        print("Please enter 'yes' or 'no'!")
+
+
 def continue_to_game(username, dragons):
     """
     Verifies user wants to play the game by entering y for yes or n for no
@@ -162,6 +190,7 @@ def main():
     """
     main_logo()
     intro()
+    game_rules()
     username = enter_username()
     continue_to_game(username, dragon_list)
     start_game(username, dragon_list)
