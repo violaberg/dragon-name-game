@@ -170,7 +170,7 @@ def start_game(username, dragons_list):
     """
     name_to_guess = random_name(dragons_list)
     guessed_letters = []
-    attempts = 8
+    attempts = 8  # Max number of attempts
 
     print(f"Welcome, {username}!")
     print(f"You have {attempts} attempts to guess the name.")
@@ -195,14 +195,15 @@ def start_game(username, dragons_list):
             print("Congrats! You are a true dragon master!")
             print(f"You guessed {name_to_guess} dragon!")
             break
-        elif guess not in name_to_guess:
-            print("Aw, incorrect! Please try again!")
+        if guess not in name_to_guess:
+            print(f"Aw, incorrect! You have {attempts} attempts remaining.")
             attempts -= 1
 
     if attempts == 0:
         print("Aw, sorry, you are out of attempts! Dragon got you!")
         print(f"Name to guess was: {name_to_guess}")
-        
+
+    clear_screen()
     main_logo()
 
 
@@ -213,9 +214,9 @@ def main():
     main_logo()
     intro()
     username = enter_username()
+    clear_screen()
     continue_to_game(username, dragon_list)
     game_rules(username)
-    clear_screen()
     start_game(username, dragon_list)
 
 
