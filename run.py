@@ -1,4 +1,12 @@
 import random
+import os
+
+
+def clear_screen():
+    """
+    Defines function to clear the screen
+    """
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 dragon_list = ["knucker", "asian lung", "wyvern", "amphithere",
@@ -23,7 +31,6 @@ def main_logo():
     ]
     for line in logo:
         print(line)
-    return
 
 
 def intro():
@@ -47,7 +54,7 @@ def intro():
         print(line)
 
 
-def game_rules(username, dragons_list):
+def game_rules(username):
     """
     Shows rules of the game if "yes" is chosen or
     if "no" is entered skips to verifying if player wants to play
@@ -85,6 +92,8 @@ def game_rules(username, dragons_list):
     else:
         print("Please enter 'yes' or 'no'!")
 
+    clear_screen()
+
 
 def continue_to_game(username, dragons):
     """
@@ -97,10 +106,10 @@ def continue_to_game(username, dragons):
         if choice in ["yes", "y"]:
             start_game(username, dragons)
             break
-        elif choice in ["no", "n"]:
+        if choice in ["no", "n"]:
             main_logo()
         else:
-            print("Please enter yes or no")
+            print("Please enter 'yes' or 'no'")
 
 
 def exit_game():
@@ -151,15 +160,15 @@ def display_name(name, guessed_letters):
         if letter in guessed_letters:
             display += letter
         else:
-            display = "_"
+            display = ""
     return display
 
 
-def start_game(username, dragons):
+def start_game(username, dragons_list):
     """
     Loop for the game
     """
-    name_to_guess = random_name(dragons)
+    name_to_guess = random_name(dragons_list)
     guessed_letters = []
     attempts = 8
 
@@ -167,7 +176,8 @@ def start_game(username, dragons):
     print(f"You have {attempts} attempts to guess the name.")
 
     while attempts > 0:
-        print(f"Name to guess: {display_name(name_to_guess, guessed_letters)}")
+        display = display_name(name_to_guess, guessed_letters)
+        print(f"Name to guess: {display}")
         guess = input("Guess a letter:\n").lower()
 
         if len(guess) != 1 or not guess.isalpha():
@@ -180,20 +190,20 @@ def start_game(username, dragons):
 
         guessed_letters.append(guess)
 
-        if guess in name_to_guess:
+        if display == name_to_guess:
             print("Great guess! You are one step closer to revealing dragon!")
-        else:
-            print("Aw, incorrect! Please try again!")
-            attempts -= 1
-
-        if "_" not in display_name(name_to_guess, guessed_letters):
             print("Congrats! You are a true dragon master!")
             print(f"You guessed {name_to_guess} dragon!")
             break
+        elif guess not in name_to_guess:
+            print("Aw, incorrect! Please try again!")
+            attempts -= 1
 
-        if "_" in display_name(name_to_guess, guessed_letters):
-            print("Aw, sorry, you are out of attempts! Dragon got you!")
-            print(f"Name to guess was: {name_to_guess}")
+    if attempts == 0:
+        print("Aw, sorry, you are out of attempts! Dragon got you!")
+        print(f"Name to guess was: {name_to_guess}")
+        
+    main_logo()
 
 
 def main():
@@ -203,8 +213,9 @@ def main():
     main_logo()
     intro()
     username = enter_username()
-    game_rules(username, dragon_list)
     continue_to_game(username, dragon_list)
+    game_rules(username)
+    clear_screen()
     start_game(username, dragon_list)
 
 
