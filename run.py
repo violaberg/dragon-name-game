@@ -179,7 +179,7 @@ def start_game(username, dragons_list):
     while attempts > 0:
         display = display_name(name_to_guess, guessed_letters)
         print(color["orange"].apply_color(f"Name to guess: {display}"))
-        guess = input("Guess a letter:\n").lower()
+        guess = input(color["yellow"].apply_color("Guess a letter:\n")).lower()
 
         if len(guess) != 1 or not guess.isalpha():
             print("Please enter one letter!")
@@ -215,9 +215,9 @@ def main():
     main_logo()
     intro()
     username = enter_username()
+    game_rules(username)
     clear_screen()
     continue_to_game(username, dragon_list)
-    game_rules(username)
     start_game(username, dragon_list)
 
 
