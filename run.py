@@ -1,5 +1,6 @@
 import random
 import os
+from colors import color
 
 
 def clear_screen():
@@ -30,7 +31,7 @@ def main_logo():
         "                 |___/",
     ]
     for line in logo:
-        print(line)
+        print(color["orange"].apply_color(line))
 
 
 def intro():
@@ -51,7 +52,7 @@ def intro():
         ""
     ]
     for line in game_intro:
-        print(line)
+        print(color["yellow"].apply_color(line))
 
 
 def game_rules(username):
@@ -172,12 +173,12 @@ def start_game(username, dragons_list):
     guessed_letters = []
     attempts = 8  # Max number of attempts
 
-    print(f"Welcome, {username}!")
+    print(color["green"].apply_color(f"Welcome, {username}!"))
     print(f"You have {attempts} attempts to guess the name.")
 
     while attempts > 0:
         display = display_name(name_to_guess, guessed_letters)
-        print(f"Name to guess: {display}")
+        print(color["orange"].apply_color(f"Name to guess: {display}"))
         guess = input("Guess a letter:\n").lower()
 
         if len(guess) != 1 or not guess.isalpha():
