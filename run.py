@@ -108,6 +108,7 @@ def continue_to_game(username, dragons):
             start_game(username, dragons)
             break
         if choice in ["no", "n"]:
+            clear_screen()
             exit_game()
         else:
             print(color["green"].apply_color("Please enter 'yes' or 'no'"))
@@ -187,11 +188,11 @@ def start_game(username, dragons_list):
         "lung": "A type of water dragon from English folklore.",
         "wyvern": "A type of water dragon from English folklore.",
         "amphithere": "A type of water dragon from English folklore.",
-        "lindworm": "A type of water dragon from English folklore.",
+        "lindworm": "A serpent-like dragons with either two or no legs.",
         "phoenix": "A type of water dragon from English folklore.",
         "marsupial": "A type of water dragon from English folklore.",
         "kirimu": "A type of water dragon from English folklore.",
-        "leviathan": "A type of water dragon from English folklore.",
+        "leviathan": "A creature with the form of a sea monster.",
         "bakunawa": "A type of water dragon from English folklore.",
         "imoogi": "A type of water dragon from English folklore.",
         "kihawahine": "A type of water dragon from English folklore.",
@@ -202,7 +203,7 @@ def start_game(username, dragons_list):
         "taniwha": "A type of water dragon from English folklore.",
         "uwabami": "A type of water dragon from English folklore.",
         "orochi": "A type of water dragon from English folklore.",
-        "zahhak": "A type of water dragon from English folklore."
+        "zahhak": "A serpent with 3 heads, and 1 of the heads is human."
     }
 
     while attempts > 0:
@@ -233,17 +234,18 @@ def start_game(username, dragons_list):
             break
 
         if guess not in name_to_guess:
-            print(f"Aw, incorrect! You have {attempts} attempts remaining.")
             attempts -= 1
+            print(f"Aw, incorrect! You have {attempts} attempts remaining.")
 
     if attempts == 0:
-        print("Aw, sorry, you are out of attempts! Dragon got you!")
+        print(color["green"].apply_color("Sorry, you are out of attempts!"))
+        print(color["green"].apply_color("Dragon got you!"))
+        print("")
         print(color["orange"].apply_color(f"It was {name_to_guess} dragon!"))
 
         if name_to_guess in dragon_descriptions:
-            print(f"Description: {dragon_descriptions[name_to_guess]}")
+            print(f"{dragon_descriptions[name_to_guess]}")
 
-    clear_screen()
     main_logo()
 
 
