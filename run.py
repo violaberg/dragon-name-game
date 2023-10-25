@@ -1,6 +1,6 @@
 import random
 import os
-from colors import color
+from classes.colors import color
 
 
 def clear_screen():
@@ -60,31 +60,53 @@ def game_rules(username):
     Shows rules of the game if "yes" is chosen or
     if "no" is entered skips to verifying if player wants to play
     """
-    rules = input("Would you like to see the rules (yes/no)?:\n").lower()
+    rules = input(
+        color["green"].apply_color("Would you like to see the rules (yes/no)?:\n")
+        ).lower()
 
     if rules in ["yes", "y",]:
         clear_screen()
         # Display rules
         print("")
-        print("'Dragons' game rules")
+        print(color["green"].apply_color
+              ("'Dragons' game rules")
+              )
         print("")
-        print("1.Enter username to play")
+        print(color["yellow"].apply_color
+              ("1.Enter username to play")
+              )
         print("")
-        print("2.Your mission is to guess the name of a concealed dragon")
+        print(color["yellow"].apply_color
+              ("2.Your mission is to guess the name of a concealed dragon")
+              )
         print("")
-        print("3.You will be given a random dragon name to guess")
+        print(color["yellow"].apply_color
+              ("3.You will be given a random dragon name to guess")
+              )
         print("")
-        print("4.Guess one letter at a time")
+        print(color["yellow"].apply_color
+              ("4.Guess one letter at a time")
+              )
         print("")
-        print("5.You have 8 chances to guess")
+        print(color["yellow"].apply_color
+              ("5.You have 8 chances to guess")
+              )
         print("")
-        print("6.Correct guess will reveal the letter,")
+        print(color["yellow"].apply_color
+              ("6.Correct guess will reveal the letter")
+              )
         print("")
-        print("7.Incorrect guess will add to attempt count")
+        print(color["yellow"].apply_color
+              ("7.Incorrect guess will add to attempt count")
+              )
         print("")
-        print("8.When you guess the dragon or run out of attempts,")
+        print(color["yellow"].apply_color
+              ("8.When you guess the dragon or run out of attempts,")
+              )
         print("")
-        print("dragon name and description will be revealed")
+        print(color["yellow"].apply_color
+              ("dragon name and description will be revealed")
+              )
         print("")
 
     elif rules in ["no", "n"]:
@@ -100,7 +122,9 @@ def continue_to_game(username):
     Verifies user wants to play the game by entering y for yes or n for no
     """
     while True:
-        choice = input("Would you like to play (yes/no)?:\n").strip().lower()
+        choice = input(color["green"].apply_color
+                       ("Would you like to play (yes/no)?:\n")
+                       ).strip().lower()
 
         if choice in ["yes", "y"]:
             clear_screen()
@@ -130,19 +154,29 @@ def enter_username():
     """
     while True:
         print()
-        username = input("Please enter username:\n")
+        username = input(color["green"].apply_color
+                         ("Please enter username:\n")
+                         )
 
         if " " in username:
-            print("Username can't contain empty spaces!")
+            print(color["green"].apply_color
+                  ("Username can't contain empty spaces!")
+                  )
 
         elif len(username) < 4:
-            print("Sorry, username has to contain at least 4 characters!")
+            print(color["green"].apply_color
+                  ("Sorry, username has to contain at least 4 characters!")
+                  )
 
         elif len(username) > 15:
-            print("Sorry, username can't be longer than 15 characters!")
+            print(color["green"].apply_color
+                  ("Sorry, username can't be longer than 15 characters!")
+                  )
 
         elif not username.isalpha():
-            print("Sorry, username can't have numbers or special characters!")
+            print(color["green"].apply_color
+                  ("Sorry, username can't have numbers or special characters!")
+                  )
 
         else:
             return username
@@ -180,7 +214,9 @@ def start_game(username, dragon):
 
     print(color["green"].apply_color(f"Welcome, {username}!"))
     print("")
-    print(f"You have {attempts} attempts to guess the name.")
+    print(color["green"].apply_color
+          (f"You have {attempts} attempts to guess the name.")
+          )
     print("")
 
     # Create a dictionary for dragon descriptions and match them to name
@@ -189,7 +225,7 @@ def start_game(username, dragon):
         "lung": "A type of water dragon from English folklore.",
         "wyvern": "A type of water dragon from English folklore.",
         "amphithere": "A type of water dragon from English folklore.",
-        "lindworm": "A serpent-like dragons with either two or no legs.",
+        "lindworm": "A serpent-like dragon with either two or no legs.",
         "phoenix": "A type of water dragon from English folklore.",
         "marsupial": "A type of water dragon from English folklore.",
         "kirimu": "A type of water dragon from English folklore.",
@@ -217,35 +253,50 @@ def start_game(username, dragon):
             continue
 
         if guess in guessed_letters:
-            print("Oh, sorry, you have already guessed that letter!")
-            print("Try again!")
+            print(color["green"].apply_color
+                  ("Oh, sorry, you have already guessed that letter!")
+                  )
+            print(color["green"].apply_color
+                  ("Please try again!")
+                  )
             continue
 
         guessed_letters.append(guess)
 
         if display == name_to_guess:
-            print("Great guess! You are one step closer to revealing dragon!")
-            print("Congrats! You are a true dragon master!")
-            print(f"You guessed {name_to_guess} dragon!")
+            print(color["green"].apply_color
+                  ("Great guess! You are one step closer to revealing dragon!")
+                  )
+            print(color["green"].apply_color
+                  ("Congrats! You are a true dragon master!")
+                  )
+            print(color["green"].apply_color
+                  (f"You guessed {name_to_guess} dragon!")
+                  )
 
             # Retrieve and display the dragon's description
             if name_to_guess in dragon_descriptions:
-                print(f"Description: {dragon_descriptions[name_to_guess]}")
+                print(color["yellow"].apply_color
+                      (f"Description: {dragon_descriptions[name_to_guess]}")
+                      )
 
             break
 
         if guess not in name_to_guess:
             attempts -= 1
-            print(f"Aw, incorrect! You have {attempts} attempts remaining.")
+            print(color["green"].apply_color
+                  (f"Aw, incorrect! You have {attempts} attempts remaining.")
+                  )
 
     if attempts == 0:
-        print(color["green"].apply_color("Sorry, you are out of attempts!"))
-        print(color["green"].apply_color("Dragon got you!"))
+        print(color["green"].apply_color("Sorry, dragon got you!"))
         print("")
         print(color["orange"].apply_color(f"It was {name_to_guess} dragon!"))
 
         if name_to_guess in dragon_descriptions:
-            print(f"{dragon_descriptions[name_to_guess]}")
+            print(color["yellow"].apply_color
+                  (f"{dragon_descriptions[name_to_guess]}")
+                  )
 
     main_logo()
 
