@@ -10,7 +10,7 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
-dragon_list = ["knucker", "lung", "wyvern", "amphithere",
+DRAGON_LIST = ["knucker", "lung", "wyvern", "amphithere",
                "lindworm", "phoenix", "marsupial", "kirimu",
                "leviathan", "bakunawa", "imoogi", "kihawahine",
                "basilisk", "frost", "cockatrice", "serpent",
@@ -89,23 +89,22 @@ def game_rules(username):
 
     elif rules in ["no", "n"]:
         # Skip to verifying if user wants to play
-        continue_to_game(username, dragon_list)
+        continue_to_game(username)
 
     else:
         print(color["green"].apply_color("Please enter 'yes' or 'no'!"))
 
 
-def continue_to_game(username, dragons):
+def continue_to_game(username):
     """
     Verifies user wants to play the game by entering y for yes or n for no
     """
-    dragons = dragon_list
     while True:
         choice = input("Would you like to play (yes/no)?:\n").strip().lower()
 
         if choice in ["yes", "y"]:
             clear_screen()
-            start_game(username, dragons)
+            start_game(username, DRAGON_LIST)
             break
         if choice in ["no", "n"]:
             clear_screen()
@@ -149,11 +148,12 @@ def enter_username():
             return username
 
 
-def random_name(dragons):
+def random_name(dragon):
     """
     Function to choose random dragon name from the list.
     """
-    return random.choice(dragons)
+    dragon = DRAGON_LIST
+    return random.choice(dragon)
 
 
 def display_name(name, guessed_letters):
@@ -169,11 +169,12 @@ def display_name(name, guessed_letters):
     return display
 
 
-def start_game(username, dragons_list):
+def start_game(username, dragon):
     """
     Loop for the game
     """
-    name_to_guess = random_name(dragons_list)
+    dragon = DRAGON_LIST
+    name_to_guess = random_name(dragon)
     guessed_letters = []
     attempts = 8  # Max number of attempts
 
@@ -257,8 +258,8 @@ def main():
     intro()
     username = enter_username()
     game_rules(username)
-    continue_to_game(username, dragon_list)
-    start_game(username, dragon_list)
+    continue_to_game(username)
+    start_game(username, DRAGON_LIST)
 
 
 main()
