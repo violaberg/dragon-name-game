@@ -289,7 +289,8 @@ def start_game(username, dragon):
 
     while attempts > 0:
         display = display_name(name_to_guess, guessed_letters)
-        print(color["orange"].apply_color(f"Name to guess: {display}"))
+        display_with_spaces = " ".join(display) # Add spaces between letters
+        print(color["orange"].apply_color(f"Name to guess: {display_with_spaces}"))
         guess = input(color["yellow"].apply_color("Guess a letter:\n")).lower()
 
         if len(guess) != 1 or not guess.isalpha():
@@ -306,7 +307,7 @@ def start_game(username, dragon):
             continue
 
         if guess in name_to_guess:
-            print(color["orange"].apply_color(f"Name to guess: {display}"))
+            print(color["orange"].apply_color(f"Name to guess: {display_with_spaces}"))
             print(color["green"].apply_color
                   ("Great guess! You are one step closer to revealing the dragon!")
                   )
@@ -326,7 +327,7 @@ def start_game(username, dragon):
             # Retrieve and display the dragon's description
             if name_to_guess in dragon_descriptions:
                 print(color["yellow"].apply_color
-                      (f"Description: {dragon_descriptions[name_to_guess]}")
+                      (f"{dragon_descriptions[name_to_guess]}")
                       )
 
             break
