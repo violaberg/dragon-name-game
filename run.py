@@ -193,20 +193,21 @@ def random_name(dragon):
 
 def display_name(name, guessed_letters):
     """
-    Shows the name with guessed letters
+    Shows the name with guessed letters and underscores in places where letter hasn't been guessed
     """
     display = ""
     for letter in name:
         if letter in guessed_letters:
             display += letter
         else:
-            display = ""
+            display += "_"
     return display
 
 
 def start_game(username, dragon):
     """
-    Loop for the game
+    Loop for the game. Prints welcoming message first and tells user\
+        how many attempts they have to guess the dragon.
     """
     dragon = DRAGON_LIST
     name_to_guess = random_name(dragon)
@@ -305,7 +306,7 @@ def start_game(username, dragon):
             continue
 
         if guess in name_to_guess:
-            print(color["orange"].apply_color(f"Name to guess: {guessed_letters}"))
+            print(color["orange"].apply_color(f"Name to guess: {display}"))
             print(color["green"].apply_color
                   ("Great guess! You are one step closer to revealing the dragon!")
                   )
