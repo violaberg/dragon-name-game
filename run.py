@@ -261,7 +261,10 @@ def start_game(username, dragon):
         "basilisk": "It can take the form of any dragon or psuedo-dragon and \
                     is armed with the deadliest bite of any creature, \
                     who causes death to those who look into its eyes.",
-        "frost": "A type of water dragon from English folklore.",
+        "frost": "Antarctic migrator, it can fly thousands of miles each year \
+                    to ensure it spends the greater part of the year in winter climate. \
+                    Grows 40 feet long and 12-15 feet high, \
+                    pure white or white tinged with blue or pink in color.",
         "cockatrice": "A type of water dragon from English folklore.",
         "serpent": "A type of water dragon from English folklore.",
         "taniwha": "A huge water lizard in Polynesian mythology. \
