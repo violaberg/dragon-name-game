@@ -268,15 +268,21 @@ def start_game(username, dragon):
         "cockatrice": "A two-legged dragon, part snake and part cock, \
                     that was said to be able to kill someone by looking at them. \
                     Hatched by a serpent from an egg laid by a rooster.",
-        "tibetan": "A type of water dragon from English folklore.",
+        "tibetan": "Almost invariable red in color it grows 40 feet long and 10-12 feet high. \
+                    Lover of high altitudes and thinner than Asian lung.",
         "taniwha": "A huge water lizard in Polynesian mythology. \
                     At sea, a taniwha often appears as a whale \
                     or a large shark such as southern right whale or whale shark. \
                     In inland waters, they may still be of whale-like dimensions, \
                     but look more like a gecko or a tuatara, having a row of spines along back.",
-        "uwabami": "A giant serpent or giant python in the legends of Japan.",
-        "orochi": "Legendary eight-headed and eight-tailed Japanese dragon/serpent.",
-        "zahhak": "A serpent with 3 heads, and 1 of the heads is human."
+        "uwabami": "A giant serpent or giant python in the legends of Japan. \
+                    The uwabami could ascend into the sky, or even fly through the air, with or without wings. \
+                    These beasts conceal themselves by hiding in the mountains or in the water.",
+        "orochi": "Legendary eight-headed and eight-tailed Japanese dragon/serpent \
+                    with cherry red eyes.",
+        "zahhak": "A serpent with 3 heads, and 1 of the heads is human. \
+                    35 feet long serpent made of the purest, most malevolent darkness, \
+                    and moves with a deadly quiet, slithering grace."
     }
 
     while attempts > 0:
