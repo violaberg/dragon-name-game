@@ -255,7 +255,9 @@ def start_game(username, dragon):
         "imoogi": "A hornless ocean dragon, equated with a sea serpent. It means 'Great Lizard'. \
                     The legend of the Imoogi says that the sun god gave the Imoogi their power through a human girl, \
                     which would be transformed into the Imoogi on her 17th birthday.",
-        "kihawahine": "A type of water dragon from English folklore.",
+        "kihawahine": "A Hawaiian shapeshifting lizard goddess with red or auburn hair. \
+                    She may be missing an eye, lost in a battle with Haumea. \
+                    Kihawahine is the oldest Aumakua or spiritual helper in Polynesia.",
         "basilisk": "A type of water dragon from English folklore.",
         "frost": "A type of water dragon from English folklore.",
         "cockatrice": "A type of water dragon from English folklore.",
