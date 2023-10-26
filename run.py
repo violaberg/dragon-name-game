@@ -236,7 +236,9 @@ def start_game(username, dragon):
         "lindworm": "A serpent-like dragon living deep in the forest \
                     with either two or no legs. Grows to 35 feet long, often green \
                         or sandy yellow in color.",
-        "phoenix": "A type of water dragon from English folklore.",
+        "phoenix": "Described as a composite of birds including the head of a golden pheasant, \
+                    the body of a mandarin duck, the tail of a peacock, the legs of a crane, \
+                    the mouth of a parrot, and the wings of a swallow.",
         "marsupial": "A type of water dragon from English folklore.",
         "kirimu": "A type of water dragon from English folklore.",
         "leviathan": "A creature with the form of a sea monster.",
