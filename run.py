@@ -233,7 +233,9 @@ def start_game(username, dragon):
         "amphithere": "Generally have light-colored feathers like a sunrise, \
                     a serpentine body similar to a lindworm, bat-like wings with feathers covering most of the forearm \
                     and often greenish in coloration, and a long tail much like a wyvern's tail.",
-        "lindworm": "A serpent-like dragon with either two or no legs.",
+        "lindworm": "A serpent-like dragon living deep in the forest \
+                    with either two or no legs. Grows to 35 feet long, often green \
+                        or sandy yellow in color.",
         "phoenix": "A type of water dragon from English folklore.",
         "marsupial": "A type of water dragon from English folklore.",
         "kirimu": "A type of water dragon from English folklore.",
