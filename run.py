@@ -13,7 +13,7 @@ def clear_screen():
 DRAGON_LIST = ["knucker", "lung", "wyvern", "amphithere",
                "lindworm", "phoenix", "marsupial", "kirimu",
                "leviathan", "bakunawa", "imoogi", "kihawahine",
-               "basilisk", "frost", "cockatrice", "serpent",
+               "basilisk", "frost", "cockatrice", "tibetan",
                "taniwha", "uwabami", "orochi", "zahhak"
                ]
 
@@ -265,8 +265,10 @@ def start_game(username, dragon):
                     to ensure it spends the greater part of the year in winter climate. \
                     Grows 40 feet long and 12-15 feet high, \
                     pure white or white tinged with blue or pink in color.",
-        "cockatrice": "A type of water dragon from English folklore.",
-        "serpent": "A type of water dragon from English folklore.",
+        "cockatrice": "A two-legged dragon, part snake and part cock, \
+                    that was said to be able to kill someone by looking at them. \
+                    Hatched by a serpent from an egg laid by a rooster.",
+        "tibetan": "A type of water dragon from English folklore.",
         "taniwha": "A huge water lizard in Polynesian mythology. \
                     At sea, a taniwha often appears as a whale \
                     or a large shark such as southern right whale or whale shark. \
