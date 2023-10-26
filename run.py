@@ -244,7 +244,11 @@ def start_game(username, dragon):
                     in a fiery pouch.",
         "kirimu": "Described as a large serpent with black hide, teeth like a dog, a huge belly, \
                     the tail of an eagle and seven horned heads.",
-        "leviathan": "A creature with the form of a sea monster.",
+        "leviathan": "A sea serpent that is often an embodiment of chaos \
+                    and threatening to eat the damned after their life. The body is mostly dark green in color, \
+                    along with purple accents on its webbed limbs and head. \
+                    It has protective plates on the underside of its body that start at the neck \
+                    and run down to where the tentacles begin.",
         "bakunawa": "A type of water dragon from English folklore.",
         "imoogi": "A type of water dragon from English folklore.",
         "kihawahine": "A type of water dragon from English folklore.",
