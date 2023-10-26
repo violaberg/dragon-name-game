@@ -235,11 +235,13 @@ def start_game(username, dragon):
                     and often greenish in coloration, and a long tail much like a wyvern's tail.",
         "lindworm": "A serpent-like dragon living deep in the forest \
                     with either two or no legs. Grows to 35 feet long, often green \
-                        or sandy yellow in color.",
+                    or sandy yellow in color.",
         "phoenix": "Described as a composite of birds including the head of a golden pheasant, \
                     the body of a mandarin duck, the tail of a peacock, the legs of a crane, \
                     the mouth of a parrot, and the wings of a swallow.",
-        "marsupial": "A type of water dragon from English folklore.",
+        "marsupial": "Green or blue-ish in color with 2 powerful hind legs it grows 25 feet long \
+                    and 15-18 feet high. It breathes blue smoke and rears one young at a time \
+                    in a fiery pouch.",
         "kirimu": "A type of water dragon from English folklore.",
         "leviathan": "A creature with the form of a sea monster.",
         "bakunawa": "A type of water dragon from English folklore.",
