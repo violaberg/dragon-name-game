@@ -249,7 +249,9 @@ def start_game(username, dragon):
                     along with purple accents on its webbed limbs and head. \
                     It has protective plates on the underside of its body that start at the neck \
                     and run down to where the tentacles begin.",
-        "bakunawa": "A type of water dragon from English folklore.",
+        "bakunawa": "A serpent-like dragon in Philippine mythology. \
+                    It is usually depicted with a characteristic looped tail and a single horn on the nose. \
+                    It is believed to be the cause of eclipses, earthquakes, rains, and wind.",
         "imoogi": "A type of water dragon from English folklore.",
         "kihawahine": "A type of water dragon from English folklore.",
         "basilisk": "A type of water dragon from English folklore.",
