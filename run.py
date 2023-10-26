@@ -108,6 +108,7 @@ def game_rules(username):
               ("dragon name and description will be revealed")
               )
         print("")
+        clear_screen()
 
     elif rules in ["no", "n"]:
         # Skip to verifying if user wants to play
@@ -238,8 +239,10 @@ def start_game(username, dragon):
         "cockatrice": "A type of water dragon from English folklore.",
         "serpent": "A type of water dragon from English folklore.",
         "taniwha": "A huge water lizard in Polynesian mythology. \
-                At sea, a taniwha often appears as a whale \
-                or a large shark such as southern right whale or whale shark",
+                    At sea, a taniwha often appears as a whale \
+                    or a large shark such as southern right whale or whale shark. \
+                    In inland waters, they may still be of whale-like dimensions, \
+                    but look more like a gecko or a tuatara, having a row of spines along back.",
         "uwabami": "A giant serpent or giant python in the legends of Japan.",
         "orochi": "Legendary eight-headed and eight-tailed Japanese dragon/serpent.",
         "zahhak": "A serpent with 3 heads, and 1 of the heads is human."
