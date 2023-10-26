@@ -237,9 +237,11 @@ def start_game(username, dragon):
         "frost": "A type of water dragon from English folklore.",
         "cockatrice": "A type of water dragon from English folklore.",
         "serpent": "A type of water dragon from English folklore.",
-        "taniwha": "A type of water dragon from English folklore.",
-        "uwabami": "A type of water dragon from English folklore.",
-        "orochi": "A type of water dragon from English folklore.",
+        "taniwha": "A huge water lizard in Polynesian mythology. \
+                At sea, a taniwha often appears as a whale \
+                or a large shark such as southern right whale or whale shark",
+        "uwabami": "A giant serpent or giant python in the legends of Japan.",
+        "orochi": "Legendary eight-headed and eight-tailed Japanese dragon/serpent.",
         "zahhak": "A serpent with 3 heads, and 1 of the heads is human."
     }
 
