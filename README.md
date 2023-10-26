@@ -55,7 +55,7 @@ I created a flowchart using [Lucidchart](https://lucid.co/?_gl=1*x824jw*_ga*MTQ0
 
 ### **Favicon**
 
-Favicon was created using a vector from [Vecteezy](https://www.vecteezy.com/) website with an idea to recreate the look of a dragon eye. I used [Faviconer](http://www.faviconer.com/) website to change it into favicon.
+I originally created favicon using a vector from [Vecteezy](https://www.vecteezy.com/) website with an idea to recreate the look of a dragon eye and used [Faviconer](http://www.faviconer.com/) website to change it into favicon but soon after realized [Heroku](https://www.heroku.com/) doesn't host static files. During my session with mentor he explained how to use web hosted image. I used [Google](https://www.google.com/) to search for dragon's eye, I chose one from [Deviant Art](https://www.deviantart.com/christoskarapanos/art/Dragon-s-Eye-585971591) and added it succesfully to my project.
 
 ### **Logo**
 
@@ -95,8 +95,8 @@ Code Institute Python Essentials Template was used for this project so the pytho
 
 ### **Media**
 
-* [Vecteezy](https://www.vecteezy.com/) :
-  * Vector used for favicon by [Ardi Lukmanul hakim](hhttps://www.vecteezy.com/vector-art/4750098-vector-illustration-of-colorful-round-chameleon-eyes-simple-flat-design")
-* [Ascii](https://www.ascii-art-generator.org/) 
+* Image for background taken from [Freepik](https://www.freepik.com/), owner [stockgiu](https://www.freepik.com/free-ai-image/majestic-dragon-perched-mountain-peak-overlooking-breathtaking-landscape-generated-by-ai_47589515.htm)
+* Ascii art for logo made with [Ascii](https://www.ascii-art-generator.org/)
+* Image for Favicon taken from Deviant Art [Christos Karapanos](https://www.deviantart.com/christoskarapanos/art/Dragon-s-Eye-585971591)
 
 ## **Future development**
