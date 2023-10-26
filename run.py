@@ -227,7 +227,9 @@ def start_game(username, dragon):
         "lung": "A lung is most often found near rivers, streams and lakes \
                     that hide it's underwater nest. There are different types of lung dragons. \
                     Japanese lung has 4 toes, Indonesian 3, Chinese or Imperial lung has 5 toes.",
-        "wyvern": "A type of water dragon from English folklore.",
+        "wyvern": "A largest form of a dragon with 2 legs, 2 wings, \
+                    and often a pointed tail which is said to be a venomous stinger. \
+                    Muddy brown to lime green in color and 50 feet long.",
         "amphithere": "A type of water dragon from English folklore.",
         "lindworm": "A serpent-like dragon with either two or no legs.",
         "phoenix": "A type of water dragon from English folklore.",
