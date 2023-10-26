@@ -242,7 +242,8 @@ def start_game(username, dragon):
         "marsupial": "Green or blue-ish in color with 2 powerful hind legs it grows 25 feet long \
                     and 15-18 feet high. It breathes blue smoke and rears one young at a time \
                     in a fiery pouch.",
-        "kirimu": "A type of water dragon from English folklore.",
+        "kirimu": "Described as a large serpent with black hide, teeth like a dog, a huge belly, \
+                    the tail of an eagle and seven horned heads.",
         "leviathan": "A creature with the form of a sea monster.",
         "bakunawa": "A type of water dragon from English folklore.",
         "imoogi": "A type of water dragon from English folklore.",
