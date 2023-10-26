@@ -221,7 +221,9 @@ def start_game(username, dragon):
 
     # Create a dictionary for dragon descriptions and match them to name
     dragon_descriptions = {
-        "knucker": "A type of water dragon from English folklore.",
+        "knucker": "A type of water dragon from English folklore. \
+                    Found in damp, wealden locations, near food sources such as rabbit warrens. \
+                    Serpentine in appearance this dragon has only vestigial wings and cannot fly.",
         "lung": "A type of water dragon from English folklore.",
         "wyvern": "A type of water dragon from English folklore.",
         "amphithere": "A type of water dragon from English folklore.",
