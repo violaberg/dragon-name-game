@@ -224,7 +224,9 @@ def start_game(username, dragon):
         "knucker": "A type of water dragon from English folklore. \
                     Found in damp, wealden locations, near food sources such as rabbit warrens. \
                     Serpentine in appearance this dragon has only vestigial wings and cannot fly.",
-        "lung": "A type of water dragon from English folklore.",
+        "lung": "A lung is most often found near rivers, streams and lakes \
+                    that hide it's underwater nest. There are different types of lung dragons. \
+                    Japanese lung has 4 toes, Indonesian 3, Chinese or Imperial lung has 5 toes.",
         "wyvern": "A type of water dragon from English folklore.",
         "amphithere": "A type of water dragon from English folklore.",
         "lindworm": "A serpent-like dragon with either two or no legs.",
