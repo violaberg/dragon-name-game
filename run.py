@@ -258,7 +258,9 @@ def start_game(username, dragon):
         "kihawahine": "A Hawaiian shapeshifting lizard goddess with red or auburn hair. \
                     She may be missing an eye, lost in a battle with Haumea. \
                     Kihawahine is the oldest Aumakua or spiritual helper in Polynesia.",
-        "basilisk": "A type of water dragon from English folklore.",
+        "basilisk": "It can take the form of any dragon or psuedo-dragon and \
+                    is armed with the deadliest bite of any creature, \
+                    who causes death to those who look into its eyes.",
         "frost": "A type of water dragon from English folklore.",
         "cockatrice": "A type of water dragon from English folklore.",
         "serpent": "A type of water dragon from English folklore.",
