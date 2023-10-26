@@ -252,7 +252,9 @@ def start_game(username, dragon):
         "bakunawa": "A serpent-like dragon in Philippine mythology. \
                     It is usually depicted with a characteristic looped tail and a single horn on the nose. \
                     It is believed to be the cause of eclipses, earthquakes, rains, and wind.",
-        "imoogi": "A type of water dragon from English folklore.",
+        "imoogi": "A hornless ocean dragon, equated with a sea serpent. It means 'Great Lizard'. \
+                    The legend of the Imoogi says that the sun god gave the Imoogi their power through a human girl, \
+                    which would be transformed into the Imoogi on her 17th birthday.",
         "kihawahine": "A type of water dragon from English folklore.",
         "basilisk": "A type of water dragon from English folklore.",
         "frost": "A type of water dragon from English folklore.",
