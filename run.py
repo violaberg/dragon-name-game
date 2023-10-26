@@ -230,7 +230,9 @@ def start_game(username, dragon):
         "wyvern": "A largest form of a dragon with 2 legs, 2 wings, \
                     and often a pointed tail which is said to be a venomous stinger. \
                     Muddy brown to lime green in color and 50 feet long.",
-        "amphithere": "A type of water dragon from English folklore.",
+        "amphithere": "Generally have light-colored feathers like a sunrise, \
+                    a serpentine body similar to a lindworm, bat-like wings with feathers covering most of the forearm \
+                    and often greenish in coloration, and a long tail much like a wyvern's tail.",
         "lindworm": "A serpent-like dragon with either two or no legs.",
         "phoenix": "A type of water dragon from English folklore.",
         "marsupial": "A type of water dragon from English folklore.",
