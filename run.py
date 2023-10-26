@@ -108,7 +108,6 @@ def game_rules(username):
               ("dragon name and description will be revealed")
               )
         print("")
-        clear_screen()
 
     elif rules in ["no", "n"]:
         # Skip to verifying if user wants to play
