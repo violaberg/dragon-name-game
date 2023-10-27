@@ -35,6 +35,29 @@ def main_logo():
         print(color["orange"].apply_color(line))
 
 
+def dragon_img():
+    """
+    ASCII art to print dragon image
+    """
+    img = [
+        r"""
+        \||/
+                |  @___oo
+      /\  /\   / (__,,,,|
+     ) /^\) ^\/ _)
+     )   /^\/   _)
+     )   _ /  / _)
+ /\  )/\/ ||  | )_)
+<  >      |(,,) )__)
+ ||      /    \)___)\
+ | \____(      )___) )___
+  \______(_______;;; __;;;
+    """
+    ]
+    for line in img:
+        print(color["orange"].apply_color(line))
+
+
 def intro():
     """
     Introduces to game
@@ -393,6 +416,7 @@ def start_game(username, dragon):
                   (f"{dragon_descriptions[name_to_guess]}")
                   )
 
+    dragon_img()
     play_again(username)
     main_logo()
 

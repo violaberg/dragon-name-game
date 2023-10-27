@@ -95,6 +95,7 @@ Code Institute Python Essentials Template was used for this project so the pytho
 
 * Image for background taken from [Freepik](https://www.freepik.com/), owner [stockgiu](https://www.freepik.com/free-ai-image/majestic-dragon-perched-mountain-peak-overlooking-breathtaking-landscape-generated-by-ai_47589515.htm)
 * Ascii art for logo made with [Ascii](https://www.ascii-art-generator.org/)
+* Ascii art for dragon image taken from [Ascii Art](https://www.asciiart.eu/mythology/dragons)
 * Image for Favicon taken from Deviant Art [Christos Karapanos](https://www.deviantart.com/christoskarapanos/art/Dragon-s-Eye-585971591)
 * For code ideas and issues I used [W3 Schools](https://www.w3schools.com/python/default.asp), [Stack Overflow](https://stackoverflow.com/questions/tagged/python) and [Github](https://github.com/search?q=name%20guessing%20game&type=repositories) to search for other project to see how terminal can be moved from original position
 * Dragon names and descriptions taken from several sources:
