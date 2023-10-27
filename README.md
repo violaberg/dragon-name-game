@@ -89,14 +89,17 @@ Code Institute Python Essentials Template was used for this project so the pytho
 
 * The biggest thank you as always to my family during this busy time of juggling project, hackathon and life in general.
 * Thank you as well to my mentor David Bowers who supported me from the very beginning always giving the best advice and ideas for solutions.
-* And thank you to Kim for support and in general for convincing me to take on this course.
+* And thank you to Kim for continuous support and in general for convincing me to take on this course.
 
-### **Content**
-
-### **Media**
+### **Acknowledgments**
 
 * Image for background taken from [Freepik](https://www.freepik.com/), owner [stockgiu](https://www.freepik.com/free-ai-image/majestic-dragon-perched-mountain-peak-overlooking-breathtaking-landscape-generated-by-ai_47589515.htm)
 * Ascii art for logo made with [Ascii](https://www.ascii-art-generator.org/)
 * Image for Favicon taken from Deviant Art [Christos Karapanos](https://www.deviantart.com/christoskarapanos/art/Dragon-s-Eye-585971591)
+* For code ideas and issues I used [W3 Schools](https://www.w3schools.com/python/default.asp), [Stack Overflow](https://stackoverflow.com/questions/tagged/python) and [Github](https://github.com/search?q=name%20guessing%20game&type=repositories) to search for other project to see how terminal can be moved from original position
+* Dragon names and descriptions taken from several sources:
+  * [Pathfinder Wiki](https://pathfinderwiki.com/wiki/Pathfinder_Wiki)
+  * [Wikipedia](https://en.wikipedia.org/wiki/Dragon)
+  * Dr. Ernest Drake "Dragonology" The complete book of dragons
 
 ## **Future development**
