@@ -312,7 +312,7 @@ def start_game(username, dragon):
 
         if len(guess) != 1 or not guess.isalpha():
             print(color["green"].apply_color("Please enter one letter only!"))
-            print(color["green"].apply_color("Guess can't be a number, special character or empty!"))
+            print(color["green"].apply_color("Guess can't be number, special character or empty!"))
             print("")
             continue
 
@@ -327,16 +327,16 @@ def start_game(username, dragon):
             continue
 
         if guess in name_to_guess:
-            print(color["orange"].apply_color(f"Name to guess: {display_with_spaces}"))
+            guessed_letters.append(guess)
+            print(color["orange"].apply_color
+                  (f"Name to guess:{display_with_guessed_letters(name_to_guess, guessed_letters)}"))
             print(color["green"].apply_color
                   ("Great guess! You are one step closer to revealing the dragon!")
                   )
             print("")
             continue
 
-        guessed_letters.append(guess)
-
-        if display_with_spaces == name_to_guess:
+        if display == name_to_guess:
             print(color["green"].apply_color
                   ("Congrats! You are a true dragon master!")
                   )
