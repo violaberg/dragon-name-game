@@ -203,6 +203,20 @@ def display_name(name, guessed_letters):
             display += "_"
     return display
 
+def display_with_guessed_letters(name, guessed_letters):
+    """
+    Returns a string that shows guessed letters in their positions
+    """
+    display = display_name(name, guessed_letters)
+    displayed_name = []
+    for i, letter in enumerate(name):
+        displayed_name.append(display[i])
+    for letter in guessed_letters:
+        if letter in name:
+            index = name.index(letter)
+            displayed_name[index] = letter
+    return " ".join(displayed_name)
+
 
 def start_game(username, dragon):
     """
