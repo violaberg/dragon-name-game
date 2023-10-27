@@ -206,8 +206,11 @@ def display_name(name, guessed_letters):
 
 def start_game(username, dragon):
     """
-    Loop for the game. Prints welcoming message first and tells user\
-        how many attempts they have to guess the dragon.
+    This function initiates loop for the game. It prints welcoming message first and provides the\
+        info about the number of attempts user has to guess the dragon. The game then proceeds\
+            by user making guesses and tracking their progress until they either guess the name\
+                and win or run out of attempts. At the end it provides the dragon name and\
+                    short description and asks if user wants to play again.
     """
     dragon = DRAGON_LIST
     name_to_guess = random_name(dragon)
@@ -295,6 +298,8 @@ def start_game(username, dragon):
 
         if len(guess) != 1 or not guess.isalpha():
             print(color["green"].apply_color("Please enter one letter only!"))
+            print(color["green"].apply_color("Guess can't be a number, special character or empty!"))
+            print("")
             continue
 
         if guess in guessed_letters:
@@ -304,6 +309,7 @@ def start_game(username, dragon):
             print(color["green"].apply_color
                   ("Please try again!")
                   )
+            print("")
             continue
 
         if guess in name_to_guess:
@@ -311,11 +317,12 @@ def start_game(username, dragon):
             print(color["green"].apply_color
                   ("Great guess! You are one step closer to revealing the dragon!")
                   )
+            print("")
             continue
 
         guessed_letters.append(guess)
 
-        if display == name_to_guess:
+        if display_with_spaces == name_to_guess:
             print(color["green"].apply_color
                   ("Congrats! You are a true dragon master!")
                   )
@@ -337,6 +344,7 @@ def start_game(username, dragon):
             print(color["green"].apply_color
                   (f"Aw, incorrect! You have {attempts} attempts remaining.")
                   )
+            print("")
 
     if attempts == 0:
         print(color["green"].apply_color("Sorry, dragon got you!"))
