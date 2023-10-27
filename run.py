@@ -147,6 +147,28 @@ def exit_game():
     print(color["green"].apply_color("Goodbye!"))
     main_logo()
     intro()
+    enter_username()
+
+
+def play_again(username):
+    """
+    Asks user if they would like to play the game again when previous game is finished
+    """
+    while True:
+        choice = input(color["green"].apply_color
+                       ("Would you like to play again (yes/no)?:\n")
+                       ).strip().lower()
+
+        if choice in ["yes", "y"]:
+            clear_screen()
+            start_game(username, DRAGON_LIST)
+            break
+        if choice in ["no", "n"]:
+            clear_screen()
+            exit_game()
+        else:
+            print(color["green"].apply_color("Please enter 'yes' or 'no'"))
+
 
 
 def enter_username():
@@ -370,6 +392,7 @@ def start_game(username, dragon):
                   (f"{dragon_descriptions[name_to_guess]}")
                   )
 
+    play_again(username)
     main_logo()
 
 
