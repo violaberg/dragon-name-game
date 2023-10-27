@@ -37,7 +37,7 @@ def main_logo():
 
 def dragon_img():
     """
-    ASCII art to print dragon image
+    ASCII art to print dragon image at the end of the game
     """
     img = [
         r"""
@@ -60,7 +60,7 @@ def dragon_img():
 
 def intro():
     """
-    Introduces to game
+    Welcomes user and introduces to game
     """
     game_intro = [
         "",
@@ -144,7 +144,9 @@ def game_rules(username):
 
 def continue_to_game(username):
     """
-    Verifies user wants to play the game by entering y for yes or n for no
+    Verifies if user wants to play the game by entering y for yes or n for no.\n
+    If user enters yes, game starts, if user enters no - switches back to logo with intro\n
+    and username entry
     """
     while True:
         choice = input(color["green"].apply_color
@@ -176,7 +178,9 @@ def exit_game():
 
 def play_again(username):
     """
-    Asks user if they would like to play the game again when previous game is finished
+    Asks user if they would like to play the game again when previous game is finished.\n
+    If user enters yes, game starts again, if no - switches back to logo and intro\n
+    with thank you message
     """
     while True:
         choice = input(color["green"].apply_color
@@ -197,7 +201,9 @@ def play_again(username):
 
 def enter_username():
     """
-    Asks user to create a username consisting of 4 - 15 letters.
+    Asks user to create a username consisting of 4 - 15 letters.\n
+    hows messages if user has empty space, less than 4 or more than 15 characters,\n
+    numbers or special characters
     """
     while True:
         print()
@@ -266,11 +272,11 @@ def display_with_guessed_letters(name, guessed_letters):
 
 def start_game(username, dragon):
     """
-    This function initiates loop for the game. It prints welcoming message first and provides the\
-        info about the number of attempts user has to guess the dragon. The game then proceeds\
-            by user making guesses and tracking their progress until they either guess the name\
-                and win or run out of attempts. At the end it provides the dragon name and\
-                    short description and asks if user wants to play again.
+    This function initiates loop for the game. It prints welcoming message first and provides the\n
+    info about the number of attempts user has to guess the dragon. The game then proceeds\n
+    by user making guesses and tracking their progress until they either guess the name\n
+    and win or run out of attempts. At the end it provides the dragon name and\n
+    short description and asks if user wants to play again.
     """
     dragon = DRAGON_LIST
     name_to_guess = random_name(dragon)
@@ -286,68 +292,72 @@ def start_game(username, dragon):
 
     # Create a dictionary for dragon descriptions and match them to name
     dragon_descriptions = {
-        "knucker": """A type of water dragon from English folklore.
-        Found in damp, wealden locations, near food sources such as rabbit warrens.
-        Serpentine in appearance this dragon has only vestigial wings and cannot fly.""",
-        "lung": """A lung is most often found near rivers, streams and lakes
-        that hide it's underwater nest. There are different types of lung dragons.
-        Japanese lung has 4 toes, Indonesian 3, Chinese or Imperial lung has 5 toes.""",
-        "wyvern": """A largest form of a dragon with 2 legs, 2 wings,
-        and often a pointed tail which is said to be a venomous stinger.
-        Muddy brown to lime green in color and 50 feet long.""",
-        "amphithere": """Generally have light-colored feathers like a sunrise,
-        a serpentine body similar to a lindworm, bat-like wings with feathers covering most of the forearm
-        and often greenish in coloration, and a long tail much like a wyvern's tail.""",
-        "lindworm": """A serpent-like dragon living deep in the forest
-        with either two or no legs. Grows to 35 feet long, often green
-        or sandy yellow in color.""",
-        "phoenix": """Described as a composite of birds including the head of a golden pheasant,
-        the body of a mandarin duck, the tail of a peacock, the legs of a crane,
-        the mouth of a parrot, and the wings of a swallow.""",
-        "marsupial": """Green or blue-ish in color with 2 powerful hind legs it grows 25 feet long
-        and 15-18 feet high. It breathes blue smoke and rears one young at a time
-        in a fiery pouch.""",
-        "kirimu": """Described as a large serpent with black hide, teeth like a dog, a huge belly,
-        the tail of an eagle and seven horned heads.""",
-        "leviathan": """A sea serpent that is often an embodiment of chaos
-        and threatening to eat the damned after their life. The body is mostly dark green in color,
-        along with purple accents on its webbed limbs and head.
-        It has protective plates on the underside of its body that start at the neck
-        and run down to where the tentacles begin.""",
-        "bakunawa": """A serpent-like dragon in Philippine mythology.
-        It is usually depicted with a characteristic looped tail and a single horn on the nose.
-        It is believed to be the cause of eclipses, earthquakes, rains, and wind.""",
-        "imoogi": """A hornless ocean dragon, equated with a sea serpent. It means 'Great Lizard'.
-        The legend of the Imoogi says that the sun god gave the Imoogi their power through a human girl,
-        which would be transformed into the Imoogi on her 17th birthday.""",
-        "kihawahine": """A Hawaiian shapeshifting lizard goddess with red or auburn hair.
-        She may be missing an eye, lost in a battle with Haumea.
-        Kihawahine is the oldest Aumakua or spiritual helper in Polynesia.""",
-        "basilisk": """It can take the form of any dragon or psuedo-dragon and
-        is armed with the deadliest bite of any creature,
-        who causes death to those who look into its eyes.""",
-        "frost": """Antarctic migrator, it can fly thousands of miles each year
-        to ensure it spends the greater part of the year in winter climate.
-        Grows 40 feet long and 12-15 feet high,
-        pure white or white tinged with blue or pink in color.""",
-        "cockatrice": """A two-legged dragon, part snake and part cock,
-        that was said to be able to kill someone by looking at them.
-        Hatched by a serpent from an egg laid by a rooster.""",
-        "tibetan": """Almost invariable red in color it grows 40 feet long and 10-12 feet high.
-        Lover of high altitudes and thinner than Asian lung.""",
-        "taniwha": """A huge water lizard in Polynesian mythology.
-        At sea, a taniwha often appears as a whale
-        or a large shark such as southern right whale or whale shark.
-        In inland waters, they may still be of whale-like dimensions,
-        but look more like a gecko or tuatara, having a row of spines along back.""",
-        "uwabami": """A giant serpent or giant python in the legends of Japan.
-        The uwabami could ascend into the sky, or even fly through the air, with or without wings.
-        These beasts conceal themselves by hiding in the mountains or in the water.""",
-        "orochi": """Legendary eight-headed and eight-tailed Japanese dragon/serpent
-        with cherry red eyes.""",
-        "zahhak": """A serpent with 3 heads, and 1 of the heads is human.
-        35 feet long serpent made of the purest, most malevolent darkness,
-        and moves with a deadly quiet, slithering grace."""
+        "knucker": ("A type of water dragon from English folklore.\n"
+                    "Found in damp, wealden locations, near food sources such as rabbit warrens.\n"
+                    "Serpentine in appearance knucker has only vestigial wings and cannot fly."),
+        "lung": ("A lung is most often found near rivers, streams and lakes\n"
+                 "that hide it's underwater nest. There are different types of lung dragons.\n"
+                 "Japanese lung has 4 toes, Indonesian 3, Chinese or Imperial lung has 5 toes."),
+        "wyvern": ("A largest form of a dragon with 2 legs, 2 wings,\n"
+                   "and often a pointed tail which is said to be a venomous stinger.\n"
+                   "Muddy brown to lime green in color and 50 feet long."),
+        "amphithere": ("Generally have light-colored feathers like a sunrise,\n"
+                       "a serpentine body similar to a lindworm, bat-like wings with feathers\n"
+                       "covering most of the forearm and often greenish in coloration,\n"
+                       "and a long tail much like a wyvern's tail."),
+        "lindworm": ("A serpent-like dragon living deep in the forest\n"
+                     "with either two or no legs. Grows to 35 feet long, often green\n"
+                     "or sandy yellow in color."),
+        "phoenix": ("Described as a composite of birds including the head of a golden pheasant,\n"
+                    "the body of a mandarin duck, the tail of a peacock, the legs of a crane,\n"
+                    "the mouth of a parrot, and the wings of a swallow."),
+        "marsupial": ("Green or blue-ish in color with 2 powerful hind legs it grows 25 feet long\n"
+                      "and 15-18 feet high. It breathes blue smoke and rears one young at a time\n"
+                      "in a fiery pouch."),
+        "kirimu": ("Described as a large serpent with black hide, teeth like a dog, a huge belly,\n"
+                   "the tail of an eagle and seven horned heads."),
+        "leviathan": ("A sea serpent that is often an embodiment of chaos\n"
+                      "and threatening to eat the damned after their life. The body is\n"
+                      "mostly dark green in color, along with purple accents on its webbed\n"
+                      "limbs and head. It has protective plates on the underside of its body\n"
+                      "that start at the neck and run down to where the tentacles begin."),
+        "bakunawa": ("A serpent-like dragon in Philippine mythology.\n"
+                     "It is usually depicted with a characteristic looped tail and\n"
+                     "a single horn on the nose. It is believed to be the cause of\n"
+                     "eclipses, earthquakes, rains, and wind."),
+        "imoogi": ("A hornless ocean dragon, equated with a sea serpent. It means 'Great Lizard'.\n"
+                   "The legend of the Imoogi says that the sun god gave the Imoogi\n"
+                   "their power through a human girl, which would be transformed into\n"
+                   "the Imoogi on her 17th birthday."),
+        "kihawahine": ("A Hawaiian shapeshifting lizard goddess with red or auburn hair.\n"
+                       "She may be missing an eye, lost in a battle with Haumea.\n"
+                       "Kihawahine is the oldest Aumakua or spiritual helper in Polynesia."),
+        "basilisk": ("It can take the form of any dragon or psuedo-dragon and\n"
+                     "is armed with the deadliest bite of any creature,\n"
+                     "who causes death to those who look into its eyes."),
+        "frost": ("Antarctic migrator, it can fly thousands of miles each year\n"
+                  "to ensure it spends the greater part of the year in winter climate.\n"
+                  "Grows 40 feet long and 12-15 feet high,\n"
+                  "pure white or white tinged with blue or pink in color."),
+        "cockatrice": ("A two-legged dragon, part snake and part cock,\n"
+                       "that was said to be able to kill someone by looking at them.\n"
+                       "Hatched by a serpent from an egg laid by a rooster."),
+        "tibetan": ("Almost invariable red in color it grows 40 feet long and 10-12 feet high.\n"
+                    "Lover of high altitudes and thinner than Asian lung."),
+        "taniwha": ("A huge water lizard in Polynesian mythology.\n"
+                    "At sea, a taniwha often appears as a whale\n"
+                    "or a large shark such as southern right whale or whale shark.\n"
+                    "In inland waters, they may still be of whale-like dimensions,\n"
+                    "but look more like a gecko or tuatara, having a row of spines along back."),
+        "uwabami": ("A giant serpent or giant python in the legends of Japan.\n"
+                    "The uwabami could ascend into the sky, or even fly through the air,\n"
+                    "with or without wings. These beasts conceal themselves by\n"
+                    "hiding in the mountains or in the water."),
+        "orochi": ("Legendary eight-headed and eight-tailed Japanese dragon/serpent\n"
+                   "with cherry red eyes."),
+        "zahhak": ("A serpent with 3 heads, and 1 of the heads is human.\n"
+                   "35 feet long serpent made of the purest, most malevolent darkness,\n"
+                   "and moves with a deadly quiet, slithering grace.")
     }
 
     while attempts > 0:
