@@ -79,8 +79,8 @@ I originally created favicon using a vector from [Vecteezy](https://www.vecteezy
 
 ### **Game won / lost**
 
-![Game won](../dragon-guessing-game/docs/screenshots/congrats-play-again.png)
-![Game lost](../dragon-guessing-game/docs/screenshots/game-lost.png)
+![Game won](../dragon-guessing-game/docs/screenshots/game-won-ascii-art.png)
+![Game lost](../dragon-guessing-game/docs/screenshots/game-lost-ascii-art.png)
 
 ### **Thank You message**
 
