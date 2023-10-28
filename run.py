@@ -55,7 +55,7 @@ def game_intro():
 
 def dragon_img():
     """
-    ASCII art to print dragon image at the end of the game
+    ASCII art to print dragon image at the end if game is won
     """
     img = [
         r"""
@@ -73,6 +73,31 @@ def dragon_img():
     """
     ]
     for line in img:
+        print(color["orange"].apply_color(line))
+
+
+def dragon_fire_img():
+    """
+    ASCII art to print dragon image at the end of lost game
+    """
+    fire_img = [
+        r"""
+   (  )   /\   _                 (     
+    \ |  (  \ ( \.(               )                      _____
+  \  \ \  `  `   ) \             (  ___                 / _   \
+ (_`    \+   . x  ( .\            \/   \____-----------/ (o)   \_
+- .-               \+  ;          (  O                           \____
+                          )        \_____________  `              \  /
+(__                +- .( -'.- <. - _  VVVVVVV VV V\                 \/
+(_____            ._._: <_ - <- _  (--  _AAAAAAA__A_/               |
+  .    /./.+-  . .- /  +--  - .     \______________//_              \_______
+  (__ ' /x  / x _/ (                                  \___'          \     /
+ , x / ( '  . / .  /                                      |           \   /
+    /  /  _/ /    +                                      /              \/
+   '  (__/                                             /                  \
+    """
+    ]
+    for line in fire_img:
         print(color["orange"].apply_color(line))
 
 
@@ -194,7 +219,6 @@ def play_again(username):
             print(color["green"].apply_color("Please enter 'yes' or 'no'"))
 
 
-
 def enter_username():
     """
     Asks user to create a username consisting of 4 - 15 letters.\n
@@ -233,7 +257,7 @@ def enter_username():
 
 def random_name(dragon):
     """
-    Function to choose random dragon name from the list.
+    Function to choose random dragon name from the list
     """
     dragon = DRAGON_LIST
     return random.choice(dragon)
@@ -454,6 +478,8 @@ def start_game(username, dragon):
                     print(color["yellow"].apply_color
                         (f"{dragon_descriptions[name_to_guess]}")
                         )
+
+                dragon_img()
                 break
 
         if guess not in name_to_guess:
@@ -473,8 +499,9 @@ def start_game(username, dragon):
                   (f"{dragon_descriptions[name_to_guess]}")
                   )
 
+        dragon_fire_img()
 
-    dragon_img()
+
     play_again(username)
     game_intro()
 

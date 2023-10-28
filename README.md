@@ -3,7 +3,7 @@
 ## **Overview**
 
 Guess the name of the mysterious dragon in this exciting terminal-based word guessing game! You'll be presented with a hidden dragon name, and your task is to reveal the name one letter at a time. With a limited number of incorrect guesses, can you unveil the dragon's identity and discover the secrets it holds? A fun and challenging adventure awaits as you uncover the name of the enigmatic dragon while enjoying the thrill of the hunt. Prepare to test your word-solving skills!<br>
-![Main page]()
+![Deployed game](../dragon-guessing-game/docs/screenshots/dragons-shot.png)
 
 ## Table of Contents:
 - [**Dragon Guessing Game**](#dragon-guessing-game)
@@ -57,21 +57,39 @@ I created a flowchart using [Lucidchart](https://lucid.co/?_gl=1*x824jw*_ga*MTQ0
 
 I originally created favicon using a vector from [Vecteezy](https://www.vecteezy.com/) website with an idea to recreate the look of a dragon eye and used [Faviconer](http://www.faviconer.com/) website to change it into favicon but soon after realized [Heroku](https://www.heroku.com/) doesn't host static files. During session with my mentor he explained how to use web hosted image so I used [Google](https://www.google.com/) to search for dragon's eye, I chose one from [Deviant Art](https://www.deviantart.com/christoskarapanos/art/Dragon-s-Eye-585971591) and added it succesfully to my project.
 
-### **Logo**
+### **Game intro**
 
-![Logo]()
+![Game intro](../dragon-guessing-game/docs/screenshots/game-intro.png)
+
+### **Username entry / rules question**
+
+![Username and rules](../dragon-guessing-game/docs/screenshots/username-rules.png)
+
+### **Username error messages**
+
+![Username errors](../dragon-guessing-game/docs/screenshots/username-errors.png)
 
 ### **Rules**
 
-![Rules]()
+![Rules](../dragon-guessing-game/docs/screenshots/rules.png)
 
-### **Game window**
+### **Guess messages**
 
-![Game window]()
+![Guess messages](../dragon-guessing-game/docs/screenshots/guess-messages.png)
 
-### **Dragon art**
+### **Game won / lost**
 
-![Dragon art]()
+![Game won](../dragon-guessing-game/docs/screenshots/congrats-play-again.png)
+![Game lost](../dragon-guessing-game/docs/screenshots/game-lost.png)
+
+### **Thank You message**
+
+![Thank you message](../dragon-guessing-game/docs/screenshots/thank-you-message.png)
+
+### **Dragon ASCII art**
+
+![Dragon art game intro](../dragon-guessing-game/docs/screenshots/game-intro-art.png)
+![Dragon art game end](../dragon-guessing-game/docs/screenshots/game-end-art.png)
 
 ## **Testing**
 
@@ -93,12 +111,12 @@ Code Institute Python Essentials Template was used for this project so the pytho
 9. Scroll to the top and select "Deploy" tab
 10. Select GitHub as deployment method and search for your repository, once found click "Connect"
 11. Scroll down and choose between "Enable Automatic Deploys" so the code is updated every time it is pushed to Github or "Manual Deploy"
-12. Deployed site [Dragons](https://dragon-guessing-game-d41047f8049b.herokuapp.com/)
+12. Deployed site accesible through this link [Dragons](https://dragon-guessing-game-d41047f8049b.herokuapp.com/)
 
 ## **Acknowledgments and Credits**
 
 * Image for background taken from [Freepik](https://www.freepik.com/), owner [stockgiu](https://www.freepik.com/free-ai-image/majestic-dragon-perched-mountain-peak-overlooking-breathtaking-landscape-generated-by-ai_47589515.htm)
-* Ascii art for logo made with [Ascii](https://www.ascii-art-generator.org/)
+* Ascii art for game intro made with [Ascii](https://www.ascii-art-generator.org/)
 * Ascii art for dragon image taken from [Ascii Art](https://www.asciiart.eu/mythology/dragons) created by Gunnar Z
 * Image for Favicon taken from Deviant Art [Christos Karapanos](https://www.deviantart.com/christoskarapanos/art/Dragon-s-Eye-585971591)
 * For code ideas and issues I used [W3 Schools](https://www.w3schools.com/python/default.asp), [Stack Overflow](https://stackoverflow.com/questions/tagged/python) and [Github](https://github.com/search?q=name%20guessing%20game&type=repositories) to search for other project to see how terminal can be moved from original position
@@ -113,4 +131,4 @@ Code Institute Python Essentials Template was used for this project so the pytho
 
 ## **Future development**
 
-* In future I would like to add sound effects, such as dragon roars.
+* In future I would like to add sound effects, such as dragon roars and possibly create ASCII art matching each dragon description.
