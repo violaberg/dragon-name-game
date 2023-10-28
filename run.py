@@ -417,7 +417,7 @@ def start_game(username, dragon):
 
         if len(guess) != 1 or not guess.isalpha():
             print(color["green"].apply_color("Please enter one letter only!"))
-            print(color["green"].apply_color("Guess can't be number, special character or empty!"))
+            print(color["green"].apply_color("Guess can't be empty, special character or number!"))
             print("")
             continue
 
