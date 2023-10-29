@@ -3,7 +3,6 @@ import os
 from classes.colors import color
 
 
-
 def clear_screen():
     """
     Defines function to clear the screen
@@ -82,7 +81,7 @@ def dragon_fire_img():
     """
     fire_img = [
         r"""
-   (  )   /\   _                 (     
+   (  )   /\   _                 (
     \ |  (  \ ( \.(               )                      _____
   \  \ \  `  `   ) \             (  ___                 / _   \
  (_`    \+   . x  ( .\            \/   \____-----------/ (o)   \_
@@ -107,10 +106,11 @@ def game_rules(username):
     if "no" is entered skips to verifying if player wants to play
     """
     rules = input(
-        color["green"].apply_color("Would you like to see the rules (yes/no)?:\n")
+        color["green"].apply_color
+        ("Would you like to see the rules (yes/no)?:\n")
         ).lower()
 
-    if rules in ["yes", "y",]:
+    if rules in ["yes", "y"]:
         clear_screen()
         # Display rules
         print("")
@@ -166,9 +166,9 @@ def game_rules(username):
 
 def continue_to_game(username):
     """
-    Verifies if user wants to play the game by entering y for yes or n for no.\n
-    If user enters yes, game starts, if user enters no - switches back to logo with intro\n
-    and username entry
+    Verifies if user wants to play the game by entering "y" for yes or\n
+    "n" for no. If user enters yes, game starts, if user enters\n
+    no - switches back to logo with intro and username entry
     """
     while True:
         choice = input(color["green"].apply_color
@@ -199,9 +199,9 @@ def exit_game():
 
 def play_again(username):
     """
-    Asks user if they would like to play the game again when previous game is finished.\n
-    If user enters yes, game starts again, if no - switches back to logo and intro\n
-    with thank you message
+    Asks user if they would like to play the game again when previous game\n
+    is finished. If user enters yes, game starts again, if no - switches back\n
+    to logo and intro with thank you message
     """
     while True:
         choice = input(color["green"].apply_color
@@ -222,8 +222,8 @@ def play_again(username):
 def enter_username():
     """
     Asks user to create a username consisting of 4 - 15 letters.\n
-    hows messages if user has empty space, less than 4 or more than 15 characters,\n
-    numbers or special characters
+    hows messages if user has empty space, less than 4 or more than\n
+    15 characters, numbers or special characters
     """
     while True:
         print()
@@ -265,7 +265,8 @@ def random_name(dragon):
 
 def display_name(name, guessed_letters):
     """
-    Shows the name with guessed letters and underscores in places where letter hasn't been guessed
+    Shows the name with guessed letters and underscores in places\n
+    where letter hasn't been guessed
     """
     display = ""
     for letter in name:
@@ -274,6 +275,7 @@ def display_name(name, guessed_letters):
         else:
             display += "_"
     return display
+
 
 def display_with_guessed_letters(name, guessed_letters):
     """
@@ -299,10 +301,11 @@ def is_name_guessed(name, guessed_letters):
 
 def start_game(username, dragon):
     """
-    This function initiates loop for the game. It prints welcoming message first and provides the\n
-    info about the number of attempts user has to guess the dragon. The game then proceeds\n
-    by user making guesses and tracking their progress until they either guess the name\n
-    and win or run out of attempts. At the end it provides the dragon name and\n
+    This function initiates loop for the game. It prints welcoming message\n
+    first and provides the info about the number of attempts user has to\n
+    guess the dragon. The game then proceeds by user making guesses and\n
+    tracking their progress until they either guess the name and win or\n
+    run out of attempts. At the end it provides the dragon name and\n
     short description and asks if user wants to play again.
     """
     dragon = DRAGON_LIST
@@ -321,127 +324,169 @@ def start_game(username, dragon):
     dragon_descriptions = {
         "knucker": ("A type of water dragon from English folklore.\n"
                     "\n"
-                    "Found in damp, wealden locations, near food sources such as rabbit warrens.\n"
+                    "Found in damp, wealden locations, near food sources\n"
                     "\n"
-                    "Serpentine in appearance knucker has only vestigial wings and cannot fly."),
+                    "such as rabbit warrens. Serpentine in appearance\n"
+                    "\n"
+                    "knucker has only vestigial wings and cannot fly."),
         "lung": ("A lung is most often found near rivers, streams and lakes\n"
                  "\n"
-                 "that hide it's underwater nest. There are different types of lung dragons.\n"
+                 "that hide it's underwater nest. There are different types\n"
                  "\n"
-                 "Japanese lung has 4 toes, Indonesian 3, Chinese or Imperial lung has 5 toes."),
+                 "of lung dragons. Japanese lung has 4 toes, Indonesian 3,\n"
+                 "\n"
+                 "Chinese or Imperial lung has 5 toes."),
         "wyvern": ("A largest form of a dragon with 2 legs, 2 wings,\n"
                    "\n"
-                   "and often a pointed tail which is said to be a venomous stinger.\n"
+                   "and often a pointed tail which is said to be a venomous\n"
                    "\n"
-                   "Muddy brown to lime green in color and 50 feet long."),
-        "amphithere": ("Generally have light-colored feathers like a sunrise,\n"
+                   "stinger. Muddy brown to lime green in color\n"
+                   "\n"
+                   "and 50 feet long."),
+        "amphithere": ("It generally has light-colored feathers like a\n"
                        "\n"
-                       "a serpentine body similar to a lindworm, bat-like wings with feathers\n"
+                       "sunrise, a serpentine body similar to a lindworm,\n"
                        "\n"
-                       "covering most of the forearm and often greenish in coloration,\n"
+                       "bat-like wings with feathers\n"
                        "\n"
-                       "and a long tail much like a wyvern's tail."),
+                       "covering most of the forearm and often greenish in\n"
+                       "\n"
+                       "coloration, and a long tail much like\n"
+                       "\n"
+                       "a wyvern's tail."),
         "lindworm": ("A serpent-like dragon living deep in the forest\n"
                      "\n"
-                     "with either two or no legs. Grows to 35 feet long, often green\n"
+                     "with either two or no legs. Grows to 35 feet long,\n"
                      "\n"
-                     "or sandy yellow in color."),
-        "phoenix": ("Described as a composite of birds including the head of a golden pheasant,\n"
+                     "often green or sandy yellow in color."),
+        "phoenix": ("Described as a composite of birds including the head of\n"
                     "\n"
-                    "the body of a mandarin duck, the tail of a peacock, the legs of a crane,\n"
+                    "a golden pheasant, the body of a mandarin duck,\n"
+                    "\n"
+                    "the tail of a peacock, the legs of a crane,\n"
                     "\n"
                     "the mouth of a parrot, and the wings of a swallow."),
-        "marsupial": ("Green or blue-ish in color with 2 powerful hind legs it grows 25 feet long\n"
+        "marsupial": ("Green or blue-ish in color with 2 powerful\n"
                       "\n"
-                      "and 15-18 feet high. It breathes blue smoke and rears one young at a time\n"
+                      "hind legs it grows 25 feet long\n"
                       "\n"
-                      "in a fiery pouch."),
-        "kirimu": ("Described as a large serpent with black hide, teeth like a dog, a huge belly,\n"
+                      "and 15-18 feet high. It breathes blue smoke\n"
+                      "\n"
+                      "and rears one young at a time in a fiery pouch."),
+        "kirimu": ("Described as a large serpent with black hide,\n"
+                   "\n"
+                   "teeth like a dog, a huge belly,\n"
                    "\n"
                    "the tail of an eagle and seven horned heads."),
         "leviathan": ("A sea serpent that is often an embodiment of chaos\n"
                       "\n"
-                      "and threatening to eat the damned after their life. The body is\n"
+                      "and threatening to eat the damned after their life.\n"
                       "\n"
-                      "mostly dark green in color, along with purple accents on its webbed\n"
+                      "The body is mostly dark green in color,\n"
                       "\n"
-                      "limbs and head. It has protective plates on the underside of its body\n"
+                      "along with purple accents on\n"
                       "\n"
-                      "that start at the neck and run down to where the tentacles begin."),
-        "bakunawa": ("A serpent-like dragon in Philippine mythology.\n"
+                      "its webbed limbs and head. It has protective\n"
+                      "\n"
+                      "plates on the underside of its body that start at\n"
+                      "\n"
+                      "the neck and run down to where the tentacles begin."),
+        "bakunawa": ("A serpent-like dragon in Philippine mythology. It\n"
                      "\n"
-                     "It is usually depicted with a characteristic looped tail and\n"
+                     "is usually depicted with a characteristic looped tail\n"
                      "\n"
-                     "a single horn on the nose. It is believed to be the cause of\n"
+                     "and a single horn on the nose. It is believed to be\n"
                      "\n"
-                     "eclipses, earthquakes, rains, and wind."),
-        "imoogi": ("A hornless ocean dragon, equated with a sea serpent. It means 'Great Lizard'.\n"
+                     "the cause of eclipses, earthquakes, rains, and wind."),
+        "imoogi": ("A hornless ocean dragon, equated with a sea serpent.\n"
                    "\n"
-                   "The legend of the Imoogi says that the sun god gave the Imoogi\n"
+                   "It means 'Great Lizard'.\n"
                    "\n"
-                   "their power through a human girl, which would be transformed into\n"
+                   "The legend of the Imoogi says that the sun god gave the\n"
                    "\n"
-                   "the Imoogi on her 17th birthday."),
-        "kihawahine": ("A Hawaiian shapeshifting lizard goddess with red or auburn hair.\n"
+                   "Imoogi their power through a human girl, which would be\n"
+                   "\n"
+                   "transformed into the Imoogi on her 17th birthday."),
+        "kihawahine": ("A Hawaiian shapeshifting lizard goddess\n"
                        "\n"
-                       "She may be missing an eye, lost in a battle with Haumea.\n"
+                       "with red or auburn hair.\n"
                        "\n"
-                       "Kihawahine is the oldest Aumakua or spiritual helper in Polynesia."),
-        "basilisk": ("It can take the form of any dragon or psuedo-dragon and\n"
+                       "She may be missing an eye, lost in a battle with\n"
+                       "\n"
+                       "Haumea. Kihawahine is the oldest Aumakua or\n"
+                       "\n"
+                       "spiritual helper in Polynesia."),
+        "basilisk": ("It can take the form of any dragon or psuedo-dragon\n"
                      "\n"
-                     "is armed with the deadliest bite of any creature,\n"
+                     "and is armed with the deadliest bite of any creature,\n"
                      "\n"
                      "who causes death to those who look into its eyes."),
-        "frost": ("Antarctic migrator, it can fly thousands of miles each year\n"
+        "frost": ("Antarctic migrator, it can fly thousands of miles\n"
                   "\n"
-                  "to ensure it spends the greater part of the year in winter climate.\n"
+                  "each year to ensure it spends the greater part\n"
+                  "\n"
+                  "of the year in winter climate.\n"
                   "\n"
                   "Grows 40 feet long and 12-15 feet high,\n"
                   "\n"
                   "pure white or white tinged with blue or pink in color."),
         "cockatrice": ("A two-legged dragon, part snake and part cock,\n"
                        "\n"
-                       "that was said to be able to kill someone by looking at them.\n"
+                       "that was said to be able to kill someone by\n"
+                       "\n"
+                       "looking at them.\n"
                        "\n"
                        "Hatched by a serpent from an egg laid by a rooster."),
-        "tibetan": ("Almost invariable red in color it grows 40 feet long and 10-12 feet high.\n"
+        "tibetan": ("Almost invariable red in color it grows 40 feet long\n"
+                    "\n"
+                    "and 10-12 feet high.\n"
                     "\n"
                     "Lover of high altitudes and thinner than Asian lung."),
         "taniwha": ("A huge water lizard in Polynesian mythology.\n"
                     "\n"
                     "At sea, a taniwha often appears as a whale\n"
                     "\n"
-                    "or a large shark such as southern right whale or whale shark.\n"
+                    "or a large shark such as southern right whale\n"
                     "\n"
-                    "In inland waters, they may still be of whale-like dimensions,\n"
+                    "or whale shark. In inland waters,\n"
                     "\n"
-                    "but look more like a gecko or tuatara, having a row of spines along back."),
-        "uwabami": ("A giant serpent or giant python in the legends of Japan.\n"
+                    "they may still be of whale-like\n"
                     "\n"
-                    "The uwabami could ascend into the sky, or even fly through the air,\n"
+                    "dimensions, but look more like a gecko or tuatara,\n"
                     "\n"
-                    "with or without wings. These beasts conceal themselves by\n"
+                    "having a row of spines along back."),
+        "uwabami": ("A giant serpent or giant python in legends of Japan.\n"
                     "\n"
-                    "hiding in the mountains or in the water."),
-        "orochi": ("Legendary eight-headed and eight-tailed Japanese dragon/serpent\n"
+                    "The uwabami could ascend into the sky,\n"
+                    "\n"
+                    "or even fly through the air,\n"
+                    "\n"
+                    "with or without wings. These beasts conceal themselves\n"
+                    "\n"
+                    "by hiding in the mountains or in the water."),
+        "orochi": ("Legendary eight-headed and eight-tailed\n"
                    "\n"
-                   "with cherry red eyes."),
+                   "Japanese dragon/serpent with cherry red eyes."),
         "zahhak": ("A serpent with 3 heads, and 1 of the heads is human.\n"
                    "\n"
-                   "35 feet long serpent made of the purest, most malevolent darkness,\n"
+                   "35 feet long serpent made of the purest,\n"
+                   "\n"
+                   "most malevolent darkness,\n"
                    "\n"
                    "and moves with a deadly quiet, slithering grace.")
     }
 
     while attempts > 0:
         display = display_name(name_to_guess, guessed_letters)
-        display_with_spaces = " ".join(display) # Add spaces between letters
-        print(color["orange"].apply_color(f"Name to guess: {display_with_spaces}"))
+        display_with_spaces = " ".join(display)  # Add spaces between letters
+        print(color["orange"].apply_color
+              (f"Name to guess: {display_with_spaces}"))
         guess = input(color["yellow"].apply_color("Guess a letter:\n")).lower()
 
         if len(guess) != 1 or not guess.isalpha():
             print(color["green"].apply_color("Please enter one letter only!"))
-            print(color["green"].apply_color("Guess can't be empty, special character or number!"))
+            print(color["green"].apply_color
+                  ("Guess can't be empty, special character or number!"))
             print("")
             continue
 
@@ -460,7 +505,8 @@ def start_game(username, dragon):
             print(color["orange"].apply_color
                   (f"Name to guess:{display_with_guessed_letters(name_to_guess, guessed_letters)}"))
             print(color["green"].apply_color
-                  ("Great guess! You are one step closer to revealing the dragon!")
+                  ("Great guess! You are one step closer to revealing\n"
+                   "the dragon!")
                   )
             print("")
 
@@ -476,8 +522,8 @@ def start_game(username, dragon):
                 # Retrieve and display the dragon's description
                 if name_to_guess in dragon_descriptions:
                     print(color["yellow"].apply_color
-                        (f"{dragon_descriptions[name_to_guess]}")
-                        )
+                          (f"{dragon_descriptions[name_to_guess]}")
+                          )
 
                 dragon_img()
                 break
@@ -500,7 +546,6 @@ def start_game(username, dragon):
                   )
 
         dragon_fire_img()
-
 
     play_again(username)
     game_intro()
