@@ -2,11 +2,14 @@
 
 ## **Overview**
 
-Guess the name of the mysterious dragon in this exciting terminal-based word guessing game! You'll be presented with a hidden dragon name, and your task is to reveal the name one letter at a time. With a limited number of incorrect guesses, can you unveil the dragon's identity and discover the secrets it holds? A fun and challenging adventure awaits as you uncover the name of the enigmatic dragon while enjoying the thrill of the hunt. Prepare to test your word-solving skills!<br>
+Guess the name of the mysterious dragon in this exciting terminal-based word guessing game! You'll be presented with a hidden dragon name, and your task is to reveal the name one letter at a time. With a limited number of incorrect guesses, can you unveil the dragon's identity and discover the secrets it holds? A fun and challenging adventure awaits as you uncover the name of the enigmatic dragon while enjoying the thrill of the hunt. Prepare to test your word-solving skills!
+
+I chose to create a dragon guessing game for this project inspired by my 5 year old son and his ever-lasting interest in dragons. During planning phase I decided to add a background, some color and ASCII art to create more visually appealing and easy to understand game to attract grown-ups and children alike. Get started, enjoy and don't get burned!
+
 ![Deployed game](docs/screenshots/dragons-shot.png)
 
-## Table of Contents:
-- [**Dragon Guessing Game**](#dragon-guessing-game)
+## **Table of Contents** :
+- [**Dragons**](#dragons)
   - [**Overview**](#overview)
   - [Table of Contents:](#table-of-contents)
   - [**Planning**](#planning)
@@ -14,15 +17,21 @@ Guess the name of the mysterious dragon in this exciting terminal-based word gue
     - [**User Stories**](#user-stories)
     - [**Goals**](#goals)
     - [**Lucidchart**](#lucidchart)
-  - [**Features**](#features)
+  - [**Features and Future Development**](#features-and-future-development)
     - [**Favicon**](#favicon)
-    - [**Logo**](#logo)
+    - [**Game intro**](#game-intro)
+    - [**Username entry / rules question**](#username-entry--rules-question)
+    - [**Username error messages**](#username-error-messages)
+    - [**Rules**](#rules)
+    - [**Guess messages**](#guess-messages)
+    - [**Game won / lost**](#game-won--lost)
+    - [**Thank You message**](#thank-you-message)
+    - [**Dragon ASCII art**](#dragon-ascii-art)
+    - [**Future Development**](#future-development)
   - [**Testing**](#testing)
   - [**Deployment**](#deployment)
-  - [**Credits**](#credits)
-    - [**Content**](#content)
-    - [**Media**](#media)
-  - [**Future development**](#future-development)
+    - [**Deploying to Heroku**](#deploying-to-heroku)
+  - [**Acknowledgments and Credits**](#acknowledgments-and-credits)
 
 ## **Planning**
 
@@ -51,7 +60,7 @@ Guess the name of the mysterious dragon in this exciting terminal-based word gue
 I created a flowchart using [Lucidchart](https://lucid.co/?_gl=1*x824jw*_ga*MTQ0OTcxNjc5Ni4xNjk3NTYwMDUx*_ga_MPV5H3XMB5*MTY5NzYyMzg3Ny4zLjAuMTY5NzYyMzg3Ny42MC4wLjA.) website to help with a flow of the game.<br>
 ![Lucidchart](docs/dragon_guessing_game.jpeg)
 
-## **Features**
+## **Features and Future Development**
 
 ### **Favicon**
 
@@ -99,13 +108,17 @@ Thanks user for visitng 'Dragons' game.
 ![Dragon art game won](docs/screenshots/game-end-art.png)
 ![Dragon art game lost](docs/screenshots/game-lost-ascii-img.png)
 
+### **Future development**
+
+* In future I would like to add sound effects, such as dragon roars and possibly create ASCII art matching each dragon description.
+
 ## **Testing**
 
 I have included details of testing in a separate file [TESTING.md](TESTING.md).
 
 ## **Deployment**
 
-### Deploying to Heroku
+### **Deploying to Heroku**
 
 Code Institute Python Essentials Template was used for this project so the python code can be viewed in a terminal in a browser:
 1. Google Heroku and open website, log in to Heroku or create a new account
@@ -135,9 +148,5 @@ Code Institute Python Essentials Template was used for this project so the pytho
   * Dr. Ernest Drake "Dragonology" The complete book of dragons
 
 * The biggest thank you as always to my family during this busy time of juggling project, hackathon and life in general.
-* Thank you as well to my mentor David Bowers who supported me from the very beginning always giving the best advice and ideas for solutions.
+* Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions.
 * And thank you to Kim for continuous support and in general for convincing me to take on this course.
-
-## **Future development**
-
-* In future I would like to add sound effects, such as dragon roars and possibly create ASCII art matching each dragon description.

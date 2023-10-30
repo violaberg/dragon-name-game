@@ -1,6 +1,10 @@
 # Testing Page
 
 ## **Table of Contents**
+- [**Manual testing**](#manual-testing)
+    - [**PEP8 Linter**](#pep8-linter)
+    - [**Playing game**](#playing-game)
+- [**Bugs and fixes**](#bugs-and-fixes)
 
 ## **Manual testing**
 I manually tested this project several ways:
@@ -135,6 +139,10 @@ I played the game countless times both in VSCode terminal and deployed version t
 No errors were found when checking HTML part of code.
 
 #### **CSS** : https://jigsaw.w3.org/css-validator/
-![CSS](../dragon-guessing-game/docs/screenshots/css-validator.png)
+No errors were found with CSS validator:
+![CSS](docs/screenshots/css-validator.png)
 
 #### **PYTHON** : https://pep8ci.herokuapp.com/#
+Once I fixed all errors it showed first time validating, no more errors were found:
+![PYTHON](docs/screenshots/python-validator.png)
+

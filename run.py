@@ -195,7 +195,8 @@ def exit_game():
     clear_screen()
     print(color["green"].apply_color("Thank you for visiting 'Dragons' game."))
     print("")
-    print(color["green"].apply_color("Goodbye!"))
+    print(color["green"].apply_color
+          ("If you would like to continue, scroll down. Goodbye!"))
     game_intro()
     enter_username()
 
@@ -440,7 +441,9 @@ def start_game(username, dragon):
         if guess in name_to_guess:
             guessed_letters.append(guess)
             print(color["orange"].apply_color
-                  (f"Name to guess:{display_with_guessed_letters(name_to_guess, guessed_letters)}"))
+                  (f"""Name to guess:{
+                      display_with_guessed_letters(
+                          name_to_guess, guessed_letters)}"""))
             print(color["green"].apply_color
                   ("You revealed a letter. Great guess!")
                   )
