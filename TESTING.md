@@ -6,7 +6,7 @@
 I manually tested this project several ways:
 ### **PEP8 Linter**
 It showed a lot of errors, most being too many characters in line that was easily fixed by creating additional lines for text. Couple were accidental extra blank lines or whitespaces. Here is the screenshot of first check with CI provided Linter:<br>
-![PEP8 Linter errors](../dragon-guessing-game/docs/screenshots/linter-errors.png)
+![PEP8 Linter errors](docs/screenshots/linter-errors.png)
 
 ### **Playing game**
 I played the game countless times both in VSCode terminal and deployed version to fix all bugs and make sure there are no errors found. Additionally it helped with choosing colors and adding ASCII images to make game more appealing.
@@ -19,7 +19,7 @@ I played the game countless times both in VSCode terminal and deployed version t
     **Problem**
 
     After adding background image and creating CSS properties for it, I noticed it wasn't showing up in deployed app, only in live server in VSCode. 
-    ![Background error](../dragon-guessing-game/docs/screenshots/background-error.png)
+    ![Background error](docs/screenshots/background-error.png)
 
     **Reason**
 
@@ -52,7 +52,7 @@ I played the game countless times both in VSCode terminal and deployed version t
     **Problem**
 
     Guessed letter printed under Guess a letter line not beside Name to guess, replacing placement in correct position.
-    ![Letter not on line](../dragon-guessing-game/docs/screenshots/guessed-letter-not-on-line.png)
+    ![Letter not on line](docs/screenshots/guessed-letter-not-on-line.png)
 
     **Reason**
 
@@ -68,7 +68,7 @@ I played the game countless times both in VSCode terminal and deployed version t
 
     **Problem**
 
-    ![Line gap](../dragon-guessing-game/docs/screenshots/line-gap.png)
+    ![Line gap](docs/screenshots/line-gap.png)
 
     **Reason**
 
@@ -85,7 +85,7 @@ I played the game countless times both in VSCode terminal and deployed version t
     **Problem**
 
     Indendation in dragon description lines.
-    ![Indentation](../dragon-guessing-game/docs/screenshots/indentation-issues.png)
+    ![Indentation](docs/screenshots/indentation-issues.png)
 
     **Reason**
 
@@ -102,7 +102,7 @@ I played the game countless times both in VSCode terminal and deployed version t
     **Problem**
 
     No username entry question.
-    ![No username entry](../dragon-guessing-game/docs/screenshots/play-again-not-enter-username.png)
+    ![No username entry](docs/screenshots/play-again-not-enter-username.png)
 
     **Reason**
 
@@ -119,7 +119,7 @@ I played the game countless times both in VSCode terminal and deployed version t
     **Problem**
 
     Instead of showing congratulations message straight after the last letter was guessed in the name, it allowed user to make another incorrect guess before congratulating.
-    ![No congrats](../dragon-guessing-game/docs/screenshots/no-congrats-or-end-of-game.png)
+    ![No congrats](docs/screenshots/no-congrats-or-end-of-game.png)
 
     **Reason**
 

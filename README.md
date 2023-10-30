@@ -3,7 +3,7 @@
 ## **Overview**
 
 Guess the name of the mysterious dragon in this exciting terminal-based word guessing game! You'll be presented with a hidden dragon name, and your task is to reveal the name one letter at a time. With a limited number of incorrect guesses, can you unveil the dragon's identity and discover the secrets it holds? A fun and challenging adventure awaits as you uncover the name of the enigmatic dragon while enjoying the thrill of the hunt. Prepare to test your word-solving skills!<br>
-![Deployed game](../dragon-guessing-game/docs/screenshots/dragons-shot.png)
+![Deployed game](docs/screenshots/dragons-shot.png)
 
 ## Table of Contents:
 - [**Dragon Guessing Game**](#dragon-guessing-game)
@@ -60,44 +60,44 @@ I originally created favicon using a vector from [Vecteezy](https://www.vecteezy
 ### **Game intro**
 
 Welcomes user to 'Dragons' game with a short introduction and asks to enter username.
-![Game intro](../dragon-guessing-game/docs/screenshots/game-intro.png)
+![Game intro](docs/screenshots/game-intro.png)
 
 ### **Username entry / rules question**
 
 Once username has been entered correctly, asks if user would like to see the rules of the game. By entering 'yes', starts the game. If user enters 'no', returns to game intro screen.
-![Username and rules](../dragon-guessing-game/docs/screenshots/username-rules.png)
+![Username and rules](docs/screenshots/username-rules.png)
 
 ### **Username error messages**
 
 If user doesn't enter username accordingly to rules, shows error message.
-![Username errors](../dragon-guessing-game/docs/screenshots/username-errors.png)
+![Username errors](docs/screenshots/username-errors.png)
 
 ### **Rules**
 
 Shows clearly written short rules of the game and asks if user would like to play.
-![Rules](../dragon-guessing-game/docs/screenshots/rules.png)
+![Rules](docs/screenshots/rules.png)
 
 ### **Guess messages**
 
 Shows a message after a guess is entered.
-![Guess messages](../dragon-guessing-game/docs/screenshots/guess-message.png)
+![Guess messages](docs/screenshots/guess-message.png)
 
 ### **Game won / lost**
 
 At the end of the game either congrats user or expresses sympathy for loss and shows dragon name revealed/ not guessed and it's description with a ASCII dragon art.
-![Game won](../dragon-guessing-game/docs/screenshots/game-won-ascii-art.png)
-![Game lost](../dragon-guessing-game/docs/screenshots/game-lost-ascii-art.png)
+![Game won](docs/screenshots/game-won-ascii-art.png)
+![Game lost](docs/screenshots/game-lost-ascii-art.png)
 
 ### **Thank You message**
 
 Thanks user for visitng 'Dragons' game.
-![Thank you message](../dragon-guessing-game/docs/screenshots/thank-you-message.png)
+![Thank you message](docs/screenshots/thank-you-message.png)
 
 ### **Dragon ASCII art**
 
-![Dragon art game intro](../dragon-guessing-game/docs/screenshots/game-intro-art.png)
-![Dragon art game won](../dragon-guessing-game/docs/screenshots/game-end-art.png)
-![Dragon art game lost](../dragon-guessing-game/docs/screenshots/game-lost-ascii-img.png)
+![Dragon art game intro](docs/screenshots/game-intro-art.png)
+![Dragon art game won](docs/screenshots/game-end-art.png)
+![Dragon art game lost](docs/screenshots/game-lost-ascii-img.png)
 
 ## **Testing**
 

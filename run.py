@@ -471,8 +471,6 @@ def start_game(username, dragon):
                   )
             print("")
 
-    clear_screen()
-
     if attempts == 0 and not is_name_guessed(name_to_guess, guessed_letters):
         print(color["green"].apply_color("Sorry, dragon got you!"))
         print("")
