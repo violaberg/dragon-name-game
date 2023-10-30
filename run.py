@@ -23,12 +23,14 @@ def game_intro():
     Prints the name of the game, welcomes user and introduces to the game
     """
     logo = [
-        " ____",
-        "|  _ \ _ __ __ _  __ _  ___  _ __  ___",
-        "| | | | '__/ _` |/ _` |/ _ \| '_ \/ __|",
-        "| |_| | | | (_| | (_| | (_) | | | \_ \_",
-        "|____/|_|  \__,_|\__, |\___/|_| |_|___/",
-        "                 |___/",
+        r"""
+ ____
+|  _ \ _ __ __ _  __ _  ___  _ __  ___
+| | | | '__/ _` |/ _` |/ _ \| '_ \/ __|
+| |_| | | | (_| | (_| | (_) | | | \_ \_
+|____/|_|  \__,_|\__, |\___/|_| |_|___/
+                 |___/
+    """
     ]
 
     intro = [
@@ -505,8 +507,7 @@ def start_game(username, dragon):
             print(color["orange"].apply_color
                   (f"Name to guess:{display_with_guessed_letters(name_to_guess, guessed_letters)}"))
             print(color["green"].apply_color
-                  ("Great guess! You are one step closer to revealing\n"
-                   "the dragon!")
+                  ("You revealed a letter. Great guess!")
                   )
             print("")
 
