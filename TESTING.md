@@ -31,6 +31,22 @@ I played the game countless times both in VSCode terminal and deployed version t
 
 * ***Intended Outcome***
 
+    Letter placements for each letter in dragon name beside "Name to guess".
+
+    **Problem**
+
+    One single placement for all letters.
+
+    **Reason**
+
+    No blank spaces between placements in function.
+
+    **Solution**
+
+    Created variable display_with_spaces to add blank spaces between placements.
+
+* ***Intended Outcome***
+
     After a letter is guessed correctly in game, replace placement with guessed letter in correct possition.
 
     **Problem**
@@ -48,11 +64,19 @@ I played the game countless times both in VSCode terminal and deployed version t
 
 * ***Intended Outcome***
 
+    A short dragon description at the end of the game.
+
     **Problem**
+
+    ![Line gap](../dragon-guessing-game/docs/screenshots/line-gap.png)
 
     **Reason**
 
+    As dragon descriptions were too long for one line, I have to split them in multiple lines. In my first try, I chose "\" and it caused gap between the text, instead of creating a continuous line.
+
     **Solution**
+
+    To resolve it, I used "\n" and wrapped each line in quotation marks.
 
 * ***Intended Outcome***
 
