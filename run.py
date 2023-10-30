@@ -195,7 +195,6 @@ def exit_game():
     clear_screen()
     print("")
     print(color["green"].apply_color("Thank you for visiting 'Dragons' game."))
-    print("")
     print(color["green"].apply_color
           ("If you would like to continue, scroll down. Goodbye!"))
     game_intro()
