@@ -59,37 +59,45 @@ I originally created favicon using a vector from [Vecteezy](https://www.vecteezy
 
 ### **Game intro**
 
+Welcomes user to 'Dragons' game with a short introduction and asks to enter username.
 ![Game intro](../dragon-guessing-game/docs/screenshots/game-intro.png)
 
 ### **Username entry / rules question**
 
+Once username has been entered correctly, asks if user would like to see the rules of the game. By entering 'yes', starts the game. If user enters 'no', returns to game intro screen.
 ![Username and rules](../dragon-guessing-game/docs/screenshots/username-rules.png)
 
 ### **Username error messages**
 
+If user doesn't enter username accordingly to rules, shows error message.
 ![Username errors](../dragon-guessing-game/docs/screenshots/username-errors.png)
 
 ### **Rules**
 
+Shows clearly written short rules of the game and asks if user would like to play.
 ![Rules](../dragon-guessing-game/docs/screenshots/rules.png)
 
 ### **Guess messages**
 
-![Guess messages](../dragon-guessing-game/docs/screenshots/guess-messages.png)
+Shows a message after a guess is entered.
+![Guess messages](../dragon-guessing-game/docs/screenshots/guess-message.png)
 
 ### **Game won / lost**
 
+At the end of the game either congrats user or expresses sympathy for loss and shows dragon name revealed/ not guessed and it's description with a ASCII dragon art.
 ![Game won](../dragon-guessing-game/docs/screenshots/game-won-ascii-art.png)
 ![Game lost](../dragon-guessing-game/docs/screenshots/game-lost-ascii-art.png)
 
 ### **Thank You message**
 
+Thanks user for visitng 'Dragons' game.
 ![Thank you message](../dragon-guessing-game/docs/screenshots/thank-you-message.png)
 
 ### **Dragon ASCII art**
 
 ![Dragon art game intro](../dragon-guessing-game/docs/screenshots/game-intro-art.png)
-![Dragon art game end](../dragon-guessing-game/docs/screenshots/game-end-art.png)
+![Dragon art game won](../dragon-guessing-game/docs/screenshots/game-end-art.png)
+![Dragon art game lost](../dragon-guessing-game/docs/screenshots/game-lost-ascii-img.png)
 
 ## **Testing**
 
@@ -117,7 +125,8 @@ Code Institute Python Essentials Template was used for this project so the pytho
 
 * Image for background taken from [Freepik](https://www.freepik.com/), owner [stockgiu](https://www.freepik.com/free-ai-image/majestic-dragon-perched-mountain-peak-overlooking-breathtaking-landscape-generated-by-ai_47589515.htm)
 * Ascii art for game intro made with [Ascii](https://www.ascii-art-generator.org/)
-* Ascii art for dragon image taken from [Ascii Art](https://www.asciiart.eu/mythology/dragons) created by Gunnar Z
+* Ascii art for dragon image if game is won taken from [Ascii Art](https://www.asciiart.eu/mythology/dragons) created by Gunnar Z
+* Ascii art for dragon image if game is lost taken from [Ascii Art](https://www.asciiart.eu/mythology/dragons) created by Laura Brown
 * Image for Favicon taken from Deviant Art [Christos Karapanos](https://www.deviantart.com/christoskarapanos/art/Dragon-s-Eye-585971591)
 * For code ideas and issues I used [W3 Schools](https://www.w3schools.com/python/default.asp), [Stack Overflow](https://stackoverflow.com/questions/tagged/python) and [Github](https://github.com/search?q=name%20guessing%20game&type=repositories) to search for other project to see how terminal can be moved from original position
 * Dragon names and descriptions taken from several sources:

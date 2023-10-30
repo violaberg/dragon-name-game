@@ -80,8 +80,61 @@ I played the game countless times both in VSCode terminal and deployed version t
 
 * ***Intended Outcome***
 
+    Evenly aligned dragon descriptions.
+
     **Problem**
+
+    Indendation in dragon description lines.
+    ![Indentation](../dragon-guessing-game/docs/screenshots/indentation-issues.png)
 
     **Reason**
 
+    I had quotation marks only at the beginning and end of each description.
+
     **Solution**
+
+    Made sure all indentation is equal and each line has quotation marks.
+
+* ***Intended Outcome***
+
+    After user chooses not to play again, game switches to game intro and asks for username again.
+
+    **Problem**
+
+    No username entry question.
+    ![No username entry](../dragon-guessing-game/docs/screenshots/play-again-not-enter-username.png)
+
+    **Reason**
+
+    I didn't call for username entry in my exit_game function.
+
+    **Solution**
+
+    A simple call for enter_username() in my exit_game function solved this.
+
+* ***Intended Outcome***
+
+    A short congratulations message  after dragon name has been guessed correct.
+
+    **Problem**
+
+    Instead of showing congratulations message straight after the last letter was guessed in the name, it allowed user to make another incorrect guess before congratulating.
+    ![No congrats](../dragon-guessing-game/docs/screenshots/no-congrats-or-end-of-game.png)
+
+    **Reason**
+
+    Incorrect indentation in loop.
+
+    **Solution**
+
+    Once I fixed indentation in loop, game worked as intended.
+
+## **Validators**
+
+#### **HTML** : https://validator.w3.org/
+No errors were found when checking HTML part of code.
+
+#### **CSS** : https://jigsaw.w3.org/css-validator/
+![CSS](../dragon-guessing-game/docs/screenshots/css-validator.png)
+
+#### **PYTHON** : https://pep8ci.herokuapp.com/#

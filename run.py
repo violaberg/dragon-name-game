@@ -192,6 +192,7 @@ def exit_game():
     """
     Thanks user for visiting and exits game gracefully by returning to logo.
     """
+    clear_screen()
     print(color["green"].apply_color("Thank you for visiting 'Dragons' game."))
     print("")
     print(color["green"].apply_color("Goodbye!"))
@@ -469,6 +470,8 @@ def start_game(username, dragon):
                   (f"Aw, incorrect! You have {attempts} attempts remaining.")
                   )
             print("")
+
+    clear_screen()
 
     if attempts == 0 and not is_name_guessed(name_to_guess, guessed_letters):
         print(color["green"].apply_color("Sorry, dragon got you!"))
