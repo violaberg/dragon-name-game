@@ -193,6 +193,7 @@ def exit_game():
     Thanks user for visiting and exits game gracefully by returning to logo.
     """
     clear_screen()
+    print("")
     print(color["green"].apply_color("Thank you for visiting 'Dragons' game."))
     print("")
     print(color["green"].apply_color
