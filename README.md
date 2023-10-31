@@ -125,7 +125,10 @@ Overall I got intrigued by ASCII art, amazingly never seen before. I think toget
 
 ### **Future development**
 
-* In future I would like to add sound effects, such as dragon roars and possibly create ASCII art matching each dragon description.
+* I really enjoyed creating this game and would love to have more time to develop it further but as everything in life, this project had its deadline and I'm happy with result of this as MVP. In future I would like to enhance the game by following:
+  * Add sound effects, such as dragon roars, flying byor snoring dragon to further improve experience for user, especially children
+  * Create ASCII art matching each dragon description
+  * Create one dictionary instead of separate dragon list and dragon descriptions and use keys and values accordingly
 
 ## **Testing**
 
@@ -164,4 +167,4 @@ Code Institute Python Essentials Template was used for this project so the pytho
 
 * The biggest thank you as always to my family during this busy time of juggling project, hackathon and life in general.
 * Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported me from the very beginning always giving the best advice and ideas for solutions.
-* And thank you to Kim for continuous support and in general for convincing me to take on this course.
+* And thank you to [Kim](https://github.com/kimatron) for continuous support and in general for convincing me to take on this course.
