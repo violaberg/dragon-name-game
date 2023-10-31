@@ -13,7 +13,7 @@
     <title>Python Terminal by Code Institute</title>
     <style>
         #background {
-            background-image: url(https://res.cloudinary.com/dydbwgh9v/image/upload/v1698269680/dragon_oe9kuo.jpg);
+            /*background-image: url(https://res.cloudinary.com/dydbwgh9v/image/upload/v1698269680/dragon_oe9kuo.jpg);*/
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -25,6 +25,10 @@
             top: 0;
             width: 98%;
             z-index: -10;
+        }
+
+        #background img {
+            margin-left: -2rem;
         }
 
         #container {
@@ -193,6 +197,7 @@
 </head>
 
 <body id="background">
+    <img src="https://res.cloudinary.com/dydbwgh9v/image/upload/v1698269680/dragon_oe9kuo.jpg" alt="A dragon sitting on a mountain">
     <main id="container">@{body}</main>
 </body>
 
