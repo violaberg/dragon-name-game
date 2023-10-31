@@ -133,7 +133,7 @@ def game_rules(username):
               )
         print("")
         print(color["yellow"].apply_color
-              ("4.Guess one letter at a time")
+              ("4.Guess only one letter at a time")
               )
         print("")
         print(color["yellow"].apply_color
@@ -141,11 +141,11 @@ def game_rules(username):
               )
         print("")
         print(color["yellow"].apply_color
-              ("6.Correct guess will reveal the letter")
+              ("6.Correct guess will reveal the letter, no attempts taken off")
               )
         print("")
         print(color["yellow"].apply_color
-              ("7.Incorrect guess will add to attempt count")
+              ("7.Incorrect guess will decrease attempts by 1")
               )
         print("")
         print(color["yellow"].apply_color
@@ -321,6 +321,10 @@ def start_game(username, dragon):
     print("")
     print(color["green"].apply_color
           (f"You have {attempts} attempts to guess the name.")
+          )
+    print("")
+    print(color["green"].apply_color
+          ("Good luck!")
           )
     print("")
 

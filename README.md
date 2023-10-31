@@ -57,38 +57,44 @@ I chose to create a dragon guessing game for this project inspired by my 5 year 
 
 ### **Lucidchart**
 
-I created a flowchart using [Lucidchart](https://lucid.co/?_gl=1*x824jw*_ga*MTQ0OTcxNjc5Ni4xNjk3NTYwMDUx*_ga_MPV5H3XMB5*MTY5NzYyMzg3Ny4zLjAuMTY5NzYyMzg3Ny42MC4wLjA.) website to help with a flow of the game.<br>
+I created a flowchart using [Lucidchart](https://lucid.co/?_gl=1*x824jw*_ga*MTQ0OTcxNjc5Ni4xNjk3NTYwMDUx*_ga_MPV5H3XMB5*MTY5NzYyMzg3Ny4zLjAuMTY5NzYyMzg3Ny42MC4wLjA.) website to help with a flow of the game, with some deviation during development to improve the game.<br>
+
 ![Lucidchart](docs/dragon_guessing_game.jpeg)
 
 ## **Features and Future Development**
 
 ### **Favicon**
 
-I originally created favicon using a vector from [Vecteezy](https://www.vecteezy.com/) website with an idea to recreate the look of a dragon eye and used [Faviconer](http://www.faviconer.com/) website to change it into favicon but soon after realized [Heroku](https://www.heroku.com/) doesn't host static files. During session with my mentor he explained how to use web hosted image so I used [Google](https://www.google.com/) to search for dragon's eye, I chose one from [Deviant Art](https://www.deviantart.com/christoskarapanos/art/Dragon-s-Eye-585971591) and added it succesfully to my project.
+I originally created favicon using a vector from [Vecteezy](https://www.vecteezy.com/) website with an idea to recreate the look of a dragon eye and used [Faviconer](http://www.faviconer.com/) website to change it into favicon but soon after realized [Heroku](https://www.heroku.com/) doesn't host static files. During session with my mentor he explained how to use web hosted image so I used [Google](https://www.google.com/) to search for dragon's eye and I chose one from [Deviant Art](https://www.deviantart.com/christoskarapanos/art/Dragon-s-Eye-585971591) and added it succesfully to my project.
 
 ### **Game intro**
 
-Welcomes user to 'Dragons' game with a short introduction and asks to enter username.
+Welcomes user to 'Dragons' game with a short introduction to intrigue them and asks to enter username.
+
 ![Game intro](docs/screenshots/game-intro.png)
 
 ### **Username entry / rules question**
 
 Once username has been entered correctly, asks if user would like to see the rules of the game. By entering 'yes', starts the game. If user enters 'no', returns to game intro screen.
+
 ![Username and rules](docs/screenshots/username-rules.png)
 
 ### **Username error messages**
 
-If user doesn't enter username accordingly to rules, shows error message.
+If user doesn't enter username accordingly to rules, shows appropriate error message.
+
 ![Username errors](docs/screenshots/username-errors.png)
 
 ### **Rules**
 
 Shows clearly written short rules of the game and asks if user would like to play.
+
 ![Rules](docs/screenshots/rules.png)
 
 ### **Guess messages**
 
-Shows a message after a guess is entered.
+Shows appropriate message after a guess is entered to let user know if he has guessed correct/ incorrect or input is invalid. If guess is incorrect, shows how many attempts to guess user has.
+
 ![Guess messages](docs/screenshots/guess-message.png)
 
 ### **Game won / lost**
@@ -96,19 +102,22 @@ Shows a message after a guess is entered.
 At the end, the game either congrats user or expresses sympathy for loss and shows dragon name revealed/ not guessed and it's description with a ASCII dragon art. Initially I wanted to clear the screen one game has finished before dragon name and description appears but decided to leave it as an option for user to be able to check guessing history.<br>
 
 I chose this cute and happy looking dragon ASCII art to show up when user wins the game, reminding me of a dragon from my childhood cartoon.
+
 ![Game won](docs/screenshots/game-won-ascii-art.png)
 
 This fire blowing dragon appears if user has lost the game. Be careful not to get burned to crisp!
+
 ![Game lost](docs/screenshots/game-lost-ascii-art.png)
 
 ### **Thank You message**
 
 Thanks user for visiting 'Dragons' game.
+
 ![Thank you message](docs/screenshots/thank-you-message.png)
 
 ### **Dragon ASCII art**
 
-Overall I got intrigued by ASCII art, amazingly never seen before.
+Overall I got intrigued by ASCII art, amazingly never seen before. I think together with colourful text it helped to create a visually appealing game that was my intention from planning stage.
 
 ![Dragon art game intro](docs/screenshots/game-intro-art.png)
 ![Dragon art game won](docs/screenshots/game-end-art.png)
