@@ -10,6 +10,7 @@
 I manually tested this project several ways:
 ### **PEP8 Linter**
 It showed a lot of errors, most being too many characters in line that was easily fixed by creating additional lines for text. Couple were accidental extra blank lines or whitespaces. Here is the screenshot of first check with CI provided Linter:<br>
+
 ![PEP8 Linter errors](docs/screenshots/linter-errors.png)
 
 ### **Playing game**
@@ -22,7 +23,8 @@ I played the game countless times both in VSCode terminal and deployed version t
 
     **Problem**
 
-    After adding background image and creating CSS properties for it, I noticed it wasn't showing up in deployed app, only in live server in VSCode. 
+    After adding background image and creating CSS properties for it, I noticed it wasn't showing up in deployed app, only in live server in VSCode.
+
     ![Background error](docs/screenshots/background-error.png)
 
     **Reason**
@@ -56,6 +58,7 @@ I played the game countless times both in VSCode terminal and deployed version t
     **Problem**
 
     Guessed letter printed under Guess a letter line not beside Name to guess, replacing placement in correct position.
+
     ![Letter not on line](docs/screenshots/guessed-letter-not-on-line.png)
 
     **Reason**
@@ -89,6 +92,7 @@ I played the game countless times both in VSCode terminal and deployed version t
     **Problem**
 
     Indendation in dragon description lines.
+
     ![Indentation](docs/screenshots/indentation-issues.png)
 
     **Reason**
@@ -106,6 +110,7 @@ I played the game countless times both in VSCode terminal and deployed version t
     **Problem**
 
     No username entry question.
+
     ![No username entry](docs/screenshots/play-again-not-enter-username.png)
 
     **Reason**
@@ -123,6 +128,7 @@ I played the game countless times both in VSCode terminal and deployed version t
     **Problem**
 
     Instead of showing congratulations message straight after the last letter was guessed in the name, it allowed user to make another incorrect guess before congratulating.
+
     ![No congrats](docs/screenshots/no-congrats-or-end-of-game.png)
 
     **Reason**
@@ -140,9 +146,11 @@ No errors were found when checking HTML part of code.
 
 #### **CSS** : https://jigsaw.w3.org/css-validator/
 No errors were found with CSS validator:
+
 ![CSS](docs/screenshots/css-validator.png)
 
 #### **PYTHON** : https://pep8ci.herokuapp.com/#
 Once I fixed all errors it showed first time validating, no more errors were found:
+
 ![PYTHON](docs/screenshots/python-validator.png)
 
