@@ -4,7 +4,8 @@
 
 Guess the name of the mysterious dragon in this exciting terminal-based word guessing game! You'll be presented with a hidden dragon name, and your task is to reveal the name one letter at a time. With a limited number of incorrect guesses, can you unveil the dragon's identity and discover the secrets it holds? A fun and challenging adventure awaits as you uncover the name of the enigmatic dragon while enjoying the thrill of the hunt. Prepare to test your word-solving skills!
 
-I chose to create a dragon guessing game for this project inspired by my 5 year old son and his ever-lasting interest in dragons. During planning phase I decided to add a background, some color and ASCII art to create more visually appealing and easy to understand game to attract grown-ups and children alike. Get started, enjoy and don't get burned!
+I chose to create a dragon guessing game for this project inspired by my 5 year old son and his ever-lasting interest in dragons. During planning phase I decided to add a background, some color and ASCII art to create more visually appealing and easy to understand game to attract grown-ups and children alike. Get started, enjoy and don't get burned!<br>
+Link to game: [Dragons](https://dragon-guessing-game-d41047f8049b.herokuapp.com/)
 
 ![Deployed game](docs/screenshots/dragons-shot.png)
 
