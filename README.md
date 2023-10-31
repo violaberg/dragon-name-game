@@ -93,16 +93,22 @@ Shows a message after a guess is entered.
 
 ### **Game won / lost**
 
-At the end of the game either congrats user or expresses sympathy for loss and shows dragon name revealed/ not guessed and it's description with a ASCII dragon art.
+At the end, the game either congrats user or expresses sympathy for loss and shows dragon name revealed/ not guessed and it's description with a ASCII dragon art. Initially I wanted to clear the screen one game has finished before dragon name and description appears but decided to leave it as an option for user to be able to check guessing history.<br>
+
+I chose this cute and happy looking dragon ASCII art to show up when user wins the game, reminding me of a dragon from my childhood cartoon.
 ![Game won](docs/screenshots/game-won-ascii-art.png)
+
+This fire blowing dragon appears if user has lost the game. Be careful not to get burned to crisp!
 ![Game lost](docs/screenshots/game-lost-ascii-art.png)
 
 ### **Thank You message**
 
-Thanks user for visitng 'Dragons' game.
+Thanks user for visiting 'Dragons' game.
 ![Thank you message](docs/screenshots/thank-you-message.png)
 
 ### **Dragon ASCII art**
+
+Overall I got intrigued by ASCII art, amazingly never seen before.
 
 ![Dragon art game intro](docs/screenshots/game-intro-art.png)
 ![Dragon art game won](docs/screenshots/game-end-art.png)
