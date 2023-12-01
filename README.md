@@ -5,7 +5,7 @@
 Guess the name of the mysterious dragon in this exciting terminal-based word guessing game! You'll be presented with a hidden dragon name, and your task is to reveal the name one letter at a time. With a limited number of incorrect guesses, can you unveil the dragon's identity and discover the secrets it holds? A fun and challenging adventure awaits as you uncover the name of the enigmatic dragon while enjoying the thrill of the hunt. Prepare to test your word-solving skills!
 
 I chose to create a dragon guessing game for this project inspired by my 5 year old son and his ever-lasting interest in dragons. During planning phase I decided to add a background, some color and ASCII art to create more visually appealing and easy to understand game to attract grown-ups and children alike. Get started, enjoy and don't get burned!<br>
-Link to game: [Dragons](https://dragon-guessing-game-d41047f8049b.herokuapp.com/)
+Link to game: [Dragons](https://dragon-name-game-933534f361b7.herokuapp.com/)
 
 ![Deployed game](docs/screenshots/dragons-shot.png)
 
@@ -94,9 +94,11 @@ Shows clearly written short rules of the game and asks if user would like to pla
 
 ### **Guess messages**
 
-Shows appropriate message after a guess is entered to let user know if he has guessed correct/ incorrect or input is invalid. If guess is incorrect, shows how many attempts to guess user has.
+Shows appropriate message after a guess is entered to let user know if he has guessed correct/ incorrect or input is invalid. If guess is incorrect, shows how many attempts to guess user has. If guess is correct, guessed letter appears in correct dragon name placement.
 
-![Guess messages](docs/screenshots/guess-message.png)
+![Guess messages](docs/screenshots/guess-message1.png)
+
+![Invalid guess](docs/screenshots/invalid-guess.png)
 
 ### **Game won / lost**
 
@@ -112,9 +114,9 @@ This fire blowing dragon appears if user has lost the game. Be careful not to ge
 
 ### **Thank You message**
 
-Thanks user for visiting 'Dragons' game.
+Thanks user for visiting 'Dragons' game and asks if user wants to play again.
 
-![Thank you message](docs/screenshots/thank-you-message.png)
+![Thank you message](docs/screenshots/thank-you-message1.png)
 
 ### **Dragon ASCII art**
 
