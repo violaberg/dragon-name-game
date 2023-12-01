@@ -196,9 +196,8 @@ def exit_game():
     print("")
     print(color["green"].apply_color("Thank you for visiting 'Dragons' game."))
     print(color["green"].apply_color
-          ("If you would like to continue, enter username. Goodbye!"))
+          ("If you changed your mind, enter 'yes' to play again. Goodbye!"))
     game_intro()
-    enter_username()
 
 
 def play_again(username):
@@ -314,7 +313,8 @@ def start_game(username, dragon):
     """
     dragon = DRAGON_LIST
     name_to_guess = random_name(dragon)
-    guessed_letters = []
+    guessed_correct_letters = []
+    guessed_incorrect_letters = []
     attempts = 8  # Max number of attempts
 
     print(color["green"].apply_color(f"Welcome, {username}!"))
@@ -419,7 +419,7 @@ def start_game(username, dragon):
     }
 
     while attempts > 0:
-        display = display_name(name_to_guess, guessed_letters)
+        display = display_name(name_to_guess, guessed_correct_letters)
         display_with_spaces = " ".join(display)  # Add spaces between letters
         print(color["orange"].apply_color
               (f"Name to guess: {display_with_spaces}"))
@@ -432,28 +432,30 @@ def start_game(username, dragon):
             print("")
             continue
 
-        if guess in guessed_letters:
+        if guess in guessed_correct_letters or guess in guessed_incorrect_letters:
             print(color["green"].apply_color
-                  ("Oh, sorry, you have already guessed that letter!")
-                  )
+                  ("You've already guessed this letter. Please try a different one."))
             print(color["green"].apply_color
-                  ("Please try again!")
+                  (f"Incorrectly guessed letters: {', '.join(guessed_incorrect_letters)}")
                   )
             print("")
             continue
 
         if guess in name_to_guess:
-            guessed_letters.append(guess)
+            guessed_correct_letters.append(guess)
             print(color["orange"].apply_color
                   (f"""Name to guess:{
                       display_with_guessed_letters(
-                          name_to_guess, guessed_letters)}"""))
+                          name_to_guess, guessed_correct_letters)}"""))
             print(color["green"].apply_color
                   ("You revealed a letter. Great guess!")
                   )
+            print(color["green"].apply_color
+                  (f"Incorrectly guessed letters: {', '.join(guessed_incorrect_letters)}")
+                  )
             print("")
 
-            if is_name_guessed(name_to_guess, guessed_letters):
+            if is_name_guessed(name_to_guess, guessed_correct_letters):
                 print(color["green"].apply_color
                       ("Congrats! You are a true dragon master!")
                       )
@@ -472,13 +474,17 @@ def start_game(username, dragon):
                 break
 
         if guess not in name_to_guess:
+            guessed_incorrect_letters.append(guess)
             attempts -= 1
             print(color["green"].apply_color
                   (f"Aw, incorrect! You have {attempts} attempts remaining.")
                   )
+            print(color["green"].apply_color
+                  (f"Incorrectly guessed letters: {', '.join(guessed_incorrect_letters)}")
+                  )
             print("")
 
-    if attempts == 0 and not is_name_guessed(name_to_guess, guessed_letters):
+    if attempts == 0 and not is_name_guessed(name_to_guess, guessed_correct_letters):
         print(color["green"].apply_color("Sorry, dragon got you!"))
         print("")
         print(color["orange"].apply_color(f"It was {name_to_guess} dragon!"))
